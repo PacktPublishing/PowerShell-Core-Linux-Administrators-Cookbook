@@ -1,0 +1,1790 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>System.IO.DirectoryInfo</T>
+      <T>System.IO.FileSystemInfo</T>
+      <T>System.MarshalByRefObject</T>
+      <T>System.Object</T>
+    </TN>
+    <ToString>cities</ToString>
+    <Props>
+      <S N="Name">cities</S>
+      <Obj N="Parent" RefId="1">
+        <TNRef RefId="0" />
+        <ToString>random</ToString>
+        <Props>
+          <S N="Name">random</S>
+          <S N="Parent">ram</S>
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/home/ram/random</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+          <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+          <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+          <S N="Attributes">Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-----</S>
+          <S N="BaseName">random</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <B N="Exists">true</B>
+      <Obj N="Root" RefId="2">
+        <TNRef RefId="0" />
+        <ToString>/</ToString>
+        <Props>
+          <S N="Name">/</S>
+          <Nil N="Parent" />
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-06-02T12:18:10+05:30</DT>
+          <DT N="CreationTimeUtc">2018-06-02T06:48:10Z</DT>
+          <DT N="LastAccessTime">2018-05-24T12:09:17+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-05-24T06:39:17Z</DT>
+          <DT N="LastWriteTime">2018-06-02T12:18:10+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-06-02T06:48:10Z</DT>
+          <S N="Attributes">ReadOnly, Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-r---</S>
+          <S N="BaseName">/</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <S N="FullName">/home/ram/random/cities</S>
+      <S N="Extension"></S>
+      <DT N="CreationTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="CreationTimeUtc">2018-06-20T07:45:14Z</DT>
+      <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+      <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+      <DT N="LastWriteTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="LastWriteTimeUtc">2018-06-20T07:45:14Z</DT>
+      <Obj N="Attributes" RefId="3">
+        <TN RefId="1">
+          <T>System.IO.FileAttributes</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Directory</ToString>
+        <I32>16</I32>
+      </Obj>
+    </Props>
+    <MS>
+      <S N="PSPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random/cities</S>
+      <S N="PSParentPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random</S>
+      <S N="PSChildName">cities</S>
+      <Obj N="PSDrive" RefId="4">
+        <TN RefId="2">
+          <T>System.Management.Automation.PSDriveInfo</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>/</ToString>
+        <Props>
+          <S N="CurrentLocation">home/ram/random</S>
+          <S N="Name">/</S>
+          <Obj N="Provider" RefId="5">
+            <TN RefId="3">
+              <T>System.Management.Automation.ProviderInfo</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>Microsoft.PowerShell.Core\FileSystem</ToString>
+            <Props>
+              <S N="ImplementingType">Microsoft.PowerShell.Commands.FileSystemProvider</S>
+              <S N="HelpFile">System.Management.Automation.dll-Help.xml</S>
+              <S N="Name">FileSystem</S>
+              <S N="PSSnapIn">Microsoft.PowerShell.Core</S>
+              <S N="ModuleName">Microsoft.PowerShell.Core</S>
+              <Nil N="Module" />
+              <S N="Description"></S>
+              <S N="Capabilities">Filter, ShouldProcess, Credentials</S>
+              <S N="Home">/home/ram</S>
+              <Obj N="Drives" RefId="6">
+                <TN RefId="4">
+                  <T>System.Collections.ObjectModel.Collection`1[[System.Management.Automation.PSDriveInfo, System.Management.Automation, Version=6.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]</T>
+                  <T>System.Object</T>
+                </TN>
+                <LST>
+                  <Ref RefId="4" />
+                </LST>
+              </Obj>
+              <B N="VolumeSeparatedByColon">false</B>
+            </Props>
+          </Obj>
+          <S N="Root">/</S>
+          <S N="Description"></S>
+          <Nil N="MaximumSize" />
+          <Obj N="Credential" RefId="7">
+            <TN RefId="5">
+              <T>System.Management.Automation.PSCredential</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>System.Management.Automation.PSCredential</ToString>
+            <Props>
+              <Nil N="UserName" />
+              <Nil N="Password" />
+            </Props>
+          </Obj>
+          <Nil N="DisplayRoot" />
+          <B N="VolumeSeparatedByColon">false</B>
+        </Props>
+        <MS>
+          <I64 N="Used">32152727552</I64>
+          <I64 N="Free">76883128320</I64>
+        </MS>
+      </Obj>
+      <Ref N="PSProvider" RefId="5" />
+      <B N="PSIsContainer">true</B>
+      <S N="Mode">d-----</S>
+      <S N="BaseName">cities</S>
+      <Nil N="LinkType" />
+    </MS>
+  </Obj>
+  <Obj RefId="8">
+    <TN RefId="6">
+      <T>System.IO.FileInfo</T>
+      <T>System.IO.FileSystemInfo</T>
+      <T>System.MarshalByRefObject</T>
+      <T>System.Object</T>
+    </TN>
+    <ToString>bangalore.jpg</ToString>
+    <Props>
+      <S N="Name">bangalore.jpg</S>
+      <I64 N="Length">0</I64>
+      <S N="DirectoryName">/home/ram/random</S>
+      <Obj N="Directory" RefId="9">
+        <TNRef RefId="0" />
+        <ToString>/home/ram/random</ToString>
+        <Props>
+          <S N="Name">random</S>
+          <S N="Parent">ram</S>
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/home/ram/random</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+          <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+          <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+          <S N="Attributes">Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-----</S>
+          <S N="BaseName">random</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <B N="IsReadOnly">false</B>
+      <B N="Exists">true</B>
+      <S N="FullName">/home/ram/random/bangalore.jpg</S>
+      <S N="Extension">.jpg</S>
+      <DT N="CreationTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="CreationTimeUtc">2018-06-20T07:45:14Z</DT>
+      <DT N="LastAccessTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="LastAccessTimeUtc">2018-06-20T07:45:14Z</DT>
+      <DT N="LastWriteTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="LastWriteTimeUtc">2018-06-20T07:45:14Z</DT>
+      <Obj N="Attributes" RefId="10">
+        <TNRef RefId="1" />
+        <ToString>Normal</ToString>
+        <I32>128</I32>
+      </Obj>
+    </Props>
+    <MS>
+      <S N="PSPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random/bangalore.jpg</S>
+      <S N="PSParentPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random</S>
+      <S N="PSChildName">bangalore.jpg</S>
+      <Ref N="PSDrive" RefId="4" />
+      <Ref N="PSProvider" RefId="5" />
+      <B N="PSIsContainer">false</B>
+      <S N="Mode">------</S>
+      <Obj N="VersionInfo" RefId="11">
+        <TN RefId="7">
+          <T>System.Diagnostics.FileVersionInfo</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>File:             /home/ram/random/bangalore.jpg_x000A_InternalName:     _x000A_OriginalFilename: _x000A_FileVersion:      _x000A_FileDescription:  _x000A_Product:          _x000A_ProductVersion:   _x000A_Debug:            False_x000A_Patched:          False_x000A_PreRelease:       False_x000A_PrivateBuild:     False_x000A_SpecialBuild:     False_x000A_Language:         _x000A_</ToString>
+        <Props>
+          <Nil N="Comments" />
+          <Nil N="CompanyName" />
+          <I32 N="FileBuildPart">0</I32>
+          <Nil N="FileDescription" />
+          <I32 N="FileMajorPart">0</I32>
+          <I32 N="FileMinorPart">0</I32>
+          <S N="FileName">/home/ram/random/bangalore.jpg</S>
+          <I32 N="FilePrivatePart">0</I32>
+          <Nil N="FileVersion" />
+          <Nil N="InternalName" />
+          <B N="IsDebug">false</B>
+          <B N="IsPatched">false</B>
+          <B N="IsPrivateBuild">false</B>
+          <B N="IsPreRelease">false</B>
+          <B N="IsSpecialBuild">false</B>
+          <Nil N="Language" />
+          <Nil N="LegalCopyright" />
+          <Nil N="LegalTrademarks" />
+          <Nil N="OriginalFilename" />
+          <Nil N="PrivateBuild" />
+          <I32 N="ProductBuildPart">0</I32>
+          <I32 N="ProductMajorPart">0</I32>
+          <I32 N="ProductMinorPart">0</I32>
+          <Nil N="ProductName" />
+          <I32 N="ProductPrivatePart">0</I32>
+          <Nil N="ProductVersion" />
+          <Nil N="SpecialBuild" />
+        </Props>
+        <MS>
+          <Version N="FileVersionRaw">0.0.0.0</Version>
+          <Version N="ProductVersionRaw">0.0.0.0</Version>
+        </MS>
+      </Obj>
+      <S N="BaseName">bangalore</S>
+      <Nil N="LinkType" />
+    </MS>
+  </Obj>
+  <Obj RefId="12">
+    <TNRef RefId="6" />
+    <ToString>coffee.jpg</ToString>
+    <Props>
+      <S N="Name">coffee.jpg</S>
+      <I64 N="Length">211787</I64>
+      <S N="DirectoryName">/home/ram/random</S>
+      <Obj N="Directory" RefId="13">
+        <TNRef RefId="0" />
+        <ToString>/home/ram/random</ToString>
+        <Props>
+          <S N="Name">random</S>
+          <S N="Parent">ram</S>
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/home/ram/random</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+          <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+          <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+          <S N="Attributes">Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-----</S>
+          <S N="BaseName">random</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <B N="IsReadOnly">false</B>
+      <B N="Exists">true</B>
+      <S N="FullName">/home/ram/random/coffee.jpg</S>
+      <S N="Extension">.jpg</S>
+      <DT N="CreationTime">2018-06-20T13:24:47+05:30</DT>
+      <DT N="CreationTimeUtc">2018-06-20T07:54:47Z</DT>
+      <DT N="LastAccessTime">2018-06-20T13:24:46+05:30</DT>
+      <DT N="LastAccessTimeUtc">2018-06-20T07:54:46Z</DT>
+      <DT N="LastWriteTime">2018-06-20T13:24:47+05:30</DT>
+      <DT N="LastWriteTimeUtc">2018-06-20T07:54:47Z</DT>
+      <Obj N="Attributes" RefId="14">
+        <TNRef RefId="1" />
+        <ToString>Normal</ToString>
+        <I32>128</I32>
+      </Obj>
+    </Props>
+    <MS>
+      <S N="PSPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random/coffee.jpg</S>
+      <S N="PSParentPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random</S>
+      <S N="PSChildName">coffee.jpg</S>
+      <Ref N="PSDrive" RefId="4" />
+      <Ref N="PSProvider" RefId="5" />
+      <B N="PSIsContainer">false</B>
+      <S N="Mode">------</S>
+      <Obj N="VersionInfo" RefId="15">
+        <TNRef RefId="7" />
+        <ToString>File:             /home/ram/random/coffee.jpg_x000A_InternalName:     _x000A_OriginalFilename: _x000A_FileVersion:      _x000A_FileDescription:  _x000A_Product:          _x000A_ProductVersion:   _x000A_Debug:            False_x000A_Patched:          False_x000A_PreRelease:       False_x000A_PrivateBuild:     False_x000A_SpecialBuild:     False_x000A_Language:         _x000A_</ToString>
+        <Props>
+          <Nil N="Comments" />
+          <Nil N="CompanyName" />
+          <I32 N="FileBuildPart">0</I32>
+          <Nil N="FileDescription" />
+          <I32 N="FileMajorPart">0</I32>
+          <I32 N="FileMinorPart">0</I32>
+          <S N="FileName">/home/ram/random/coffee.jpg</S>
+          <I32 N="FilePrivatePart">0</I32>
+          <Nil N="FileVersion" />
+          <Nil N="InternalName" />
+          <B N="IsDebug">false</B>
+          <B N="IsPatched">false</B>
+          <B N="IsPrivateBuild">false</B>
+          <B N="IsPreRelease">false</B>
+          <B N="IsSpecialBuild">false</B>
+          <Nil N="Language" />
+          <Nil N="LegalCopyright" />
+          <Nil N="LegalTrademarks" />
+          <Nil N="OriginalFilename" />
+          <Nil N="PrivateBuild" />
+          <I32 N="ProductBuildPart">0</I32>
+          <I32 N="ProductMajorPart">0</I32>
+          <I32 N="ProductMinorPart">0</I32>
+          <Nil N="ProductName" />
+          <I32 N="ProductPrivatePart">0</I32>
+          <Nil N="ProductVersion" />
+          <Nil N="SpecialBuild" />
+        </Props>
+        <MS>
+          <Version N="FileVersionRaw">0.0.0.0</Version>
+          <Version N="ProductVersionRaw">0.0.0.0</Version>
+        </MS>
+      </Obj>
+      <S N="BaseName">coffee</S>
+      <Nil N="LinkType" />
+    </MS>
+  </Obj>
+  <Obj RefId="16">
+    <TNRef RefId="6" />
+    <ToString>crunched-numbers.csv</ToString>
+    <Props>
+      <S N="Name">crunched-numbers.csv</S>
+      <I64 N="Length">464</I64>
+      <S N="DirectoryName">/home/ram/random</S>
+      <Obj N="Directory" RefId="17">
+        <TNRef RefId="0" />
+        <ToString>/home/ram/random</ToString>
+        <Props>
+          <S N="Name">random</S>
+          <S N="Parent">ram</S>
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/home/ram/random</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+          <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+          <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+          <S N="Attributes">Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-----</S>
+          <S N="BaseName">random</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <B N="IsReadOnly">false</B>
+      <B N="Exists">true</B>
+      <S N="FullName">/home/ram/random/crunched-numbers.csv</S>
+      <S N="Extension">.csv</S>
+      <DT N="CreationTime">2018-07-01T19:59:04+05:30</DT>
+      <DT N="CreationTimeUtc">2018-07-01T14:29:04Z</DT>
+      <DT N="LastAccessTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="LastAccessTimeUtc">2018-06-20T07:45:14Z</DT>
+      <DT N="LastWriteTime">2018-07-01T19:59:04+05:30</DT>
+      <DT N="LastWriteTimeUtc">2018-07-01T14:29:04Z</DT>
+      <Obj N="Attributes" RefId="18">
+        <TNRef RefId="1" />
+        <ToString>Normal</ToString>
+        <I32>128</I32>
+      </Obj>
+    </Props>
+    <MS>
+      <S N="PSPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random/crunched-numbers.csv</S>
+      <S N="PSParentPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random</S>
+      <S N="PSChildName">crunched-numbers.csv</S>
+      <Ref N="PSDrive" RefId="4" />
+      <Ref N="PSProvider" RefId="5" />
+      <B N="PSIsContainer">false</B>
+      <S N="Mode">------</S>
+      <Obj N="VersionInfo" RefId="19">
+        <TNRef RefId="7" />
+        <ToString>File:             /home/ram/random/crunched-numbers.csv_x000A_InternalName:     _x000A_OriginalFilename: _x000A_FileVersion:      _x000A_FileDescription:  _x000A_Product:          _x000A_ProductVersion:   _x000A_Debug:            False_x000A_Patched:          False_x000A_PreRelease:       False_x000A_PrivateBuild:     False_x000A_SpecialBuild:     False_x000A_Language:         _x000A_</ToString>
+        <Props>
+          <Nil N="Comments" />
+          <Nil N="CompanyName" />
+          <I32 N="FileBuildPart">0</I32>
+          <Nil N="FileDescription" />
+          <I32 N="FileMajorPart">0</I32>
+          <I32 N="FileMinorPart">0</I32>
+          <S N="FileName">/home/ram/random/crunched-numbers.csv</S>
+          <I32 N="FilePrivatePart">0</I32>
+          <Nil N="FileVersion" />
+          <Nil N="InternalName" />
+          <B N="IsDebug">false</B>
+          <B N="IsPatched">false</B>
+          <B N="IsPrivateBuild">false</B>
+          <B N="IsPreRelease">false</B>
+          <B N="IsSpecialBuild">false</B>
+          <Nil N="Language" />
+          <Nil N="LegalCopyright" />
+          <Nil N="LegalTrademarks" />
+          <Nil N="OriginalFilename" />
+          <Nil N="PrivateBuild" />
+          <I32 N="ProductBuildPart">0</I32>
+          <I32 N="ProductMajorPart">0</I32>
+          <I32 N="ProductMinorPart">0</I32>
+          <Nil N="ProductName" />
+          <I32 N="ProductPrivatePart">0</I32>
+          <Nil N="ProductVersion" />
+          <Nil N="SpecialBuild" />
+        </Props>
+        <MS>
+          <Version N="FileVersionRaw">0.0.0.0</Version>
+          <Version N="ProductVersionRaw">0.0.0.0</Version>
+        </MS>
+      </Obj>
+      <S N="BaseName">crunched-numbers</S>
+      <Nil N="LinkType" />
+    </MS>
+  </Obj>
+  <Obj RefId="20">
+    <TNRef RefId="6" />
+    <ToString>demo.doc</ToString>
+    <Props>
+      <S N="Name">demo.doc</S>
+      <I64 N="Length">0</I64>
+      <S N="DirectoryName">/home/ram/random</S>
+      <Obj N="Directory" RefId="21">
+        <TNRef RefId="0" />
+        <ToString>/home/ram/random</ToString>
+        <Props>
+          <S N="Name">random</S>
+          <S N="Parent">ram</S>
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/home/ram/random</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+          <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+          <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+          <S N="Attributes">Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-----</S>
+          <S N="BaseName">random</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <B N="IsReadOnly">false</B>
+      <B N="Exists">true</B>
+      <S N="FullName">/home/ram/random/demo.doc</S>
+      <S N="Extension">.doc</S>
+      <DT N="CreationTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="CreationTimeUtc">2018-06-20T07:45:14Z</DT>
+      <DT N="LastAccessTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="LastAccessTimeUtc">2018-06-20T07:45:14Z</DT>
+      <DT N="LastWriteTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="LastWriteTimeUtc">2018-06-20T07:45:14Z</DT>
+      <Obj N="Attributes" RefId="22">
+        <TNRef RefId="1" />
+        <ToString>Normal</ToString>
+        <I32>128</I32>
+      </Obj>
+    </Props>
+    <MS>
+      <S N="PSPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random/demo.doc</S>
+      <S N="PSParentPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random</S>
+      <S N="PSChildName">demo.doc</S>
+      <Ref N="PSDrive" RefId="4" />
+      <Ref N="PSProvider" RefId="5" />
+      <B N="PSIsContainer">false</B>
+      <S N="Mode">------</S>
+      <Obj N="VersionInfo" RefId="23">
+        <TNRef RefId="7" />
+        <ToString>File:             /home/ram/random/demo.doc_x000A_InternalName:     _x000A_OriginalFilename: _x000A_FileVersion:      _x000A_FileDescription:  _x000A_Product:          _x000A_ProductVersion:   _x000A_Debug:            False_x000A_Patched:          False_x000A_PreRelease:       False_x000A_PrivateBuild:     False_x000A_SpecialBuild:     False_x000A_Language:         _x000A_</ToString>
+        <Props>
+          <Nil N="Comments" />
+          <Nil N="CompanyName" />
+          <I32 N="FileBuildPart">0</I32>
+          <Nil N="FileDescription" />
+          <I32 N="FileMajorPart">0</I32>
+          <I32 N="FileMinorPart">0</I32>
+          <S N="FileName">/home/ram/random/demo.doc</S>
+          <I32 N="FilePrivatePart">0</I32>
+          <Nil N="FileVersion" />
+          <Nil N="InternalName" />
+          <B N="IsDebug">false</B>
+          <B N="IsPatched">false</B>
+          <B N="IsPrivateBuild">false</B>
+          <B N="IsPreRelease">false</B>
+          <B N="IsSpecialBuild">false</B>
+          <Nil N="Language" />
+          <Nil N="LegalCopyright" />
+          <Nil N="LegalTrademarks" />
+          <Nil N="OriginalFilename" />
+          <Nil N="PrivateBuild" />
+          <I32 N="ProductBuildPart">0</I32>
+          <I32 N="ProductMajorPart">0</I32>
+          <I32 N="ProductMinorPart">0</I32>
+          <Nil N="ProductName" />
+          <I32 N="ProductPrivatePart">0</I32>
+          <Nil N="ProductVersion" />
+          <Nil N="SpecialBuild" />
+        </Props>
+        <MS>
+          <Version N="FileVersionRaw">0.0.0.0</Version>
+          <Version N="ProductVersionRaw">0.0.0.0</Version>
+        </MS>
+      </Obj>
+      <S N="BaseName">demo</S>
+      <Nil N="LinkType" />
+    </MS>
+  </Obj>
+  <Obj RefId="24">
+    <TNRef RefId="6" />
+    <ToString>file-list.csv</ToString>
+    <Props>
+      <S N="Name">file-list.csv</S>
+      <I64 N="Length">1917</I64>
+      <S N="DirectoryName">/home/ram/random</S>
+      <Obj N="Directory" RefId="25">
+        <TNRef RefId="0" />
+        <ToString>/home/ram/random</ToString>
+        <Props>
+          <S N="Name">random</S>
+          <S N="Parent">ram</S>
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/home/ram/random</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+          <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+          <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+          <S N="Attributes">Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-----</S>
+          <S N="BaseName">random</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <B N="IsReadOnly">false</B>
+      <B N="Exists">true</B>
+      <S N="FullName">/home/ram/random/file-list.csv</S>
+      <S N="Extension">.csv</S>
+      <DT N="CreationTime">2018-07-02T12:14:26+05:30</DT>
+      <DT N="CreationTimeUtc">2018-07-02T06:44:26Z</DT>
+      <DT N="LastAccessTime">2018-07-02T03:00:07+05:30</DT>
+      <DT N="LastAccessTimeUtc">2018-07-01T21:30:07Z</DT>
+      <DT N="LastWriteTime">2018-07-02T12:14:26+05:30</DT>
+      <DT N="LastWriteTimeUtc">2018-07-02T06:44:26Z</DT>
+      <Obj N="Attributes" RefId="26">
+        <TNRef RefId="1" />
+        <ToString>Normal</ToString>
+        <I32>128</I32>
+      </Obj>
+    </Props>
+    <MS>
+      <S N="PSPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random/file-list.csv</S>
+      <S N="PSParentPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random</S>
+      <S N="PSChildName">file-list.csv</S>
+      <Ref N="PSDrive" RefId="4" />
+      <Ref N="PSProvider" RefId="5" />
+      <B N="PSIsContainer">false</B>
+      <S N="Mode">------</S>
+      <Obj N="VersionInfo" RefId="27">
+        <TNRef RefId="7" />
+        <ToString>File:             /home/ram/random/file-list.csv_x000A_InternalName:     _x000A_OriginalFilename: _x000A_FileVersion:      _x000A_FileDescription:  _x000A_Product:          _x000A_ProductVersion:   _x000A_Debug:            False_x000A_Patched:          False_x000A_PreRelease:       False_x000A_PrivateBuild:     False_x000A_SpecialBuild:     False_x000A_Language:         _x000A_</ToString>
+        <Props>
+          <Nil N="Comments" />
+          <Nil N="CompanyName" />
+          <I32 N="FileBuildPart">0</I32>
+          <Nil N="FileDescription" />
+          <I32 N="FileMajorPart">0</I32>
+          <I32 N="FileMinorPart">0</I32>
+          <S N="FileName">/home/ram/random/file-list.csv</S>
+          <I32 N="FilePrivatePart">0</I32>
+          <Nil N="FileVersion" />
+          <Nil N="InternalName" />
+          <B N="IsDebug">false</B>
+          <B N="IsPatched">false</B>
+          <B N="IsPrivateBuild">false</B>
+          <B N="IsPreRelease">false</B>
+          <B N="IsSpecialBuild">false</B>
+          <Nil N="Language" />
+          <Nil N="LegalCopyright" />
+          <Nil N="LegalTrademarks" />
+          <Nil N="OriginalFilename" />
+          <Nil N="PrivateBuild" />
+          <I32 N="ProductBuildPart">0</I32>
+          <I32 N="ProductMajorPart">0</I32>
+          <I32 N="ProductMinorPart">0</I32>
+          <Nil N="ProductName" />
+          <I32 N="ProductPrivatePart">0</I32>
+          <Nil N="ProductVersion" />
+          <Nil N="SpecialBuild" />
+        </Props>
+        <MS>
+          <Version N="FileVersionRaw">0.0.0.0</Version>
+          <Version N="ProductVersionRaw">0.0.0.0</Version>
+        </MS>
+      </Obj>
+      <S N="BaseName">file-list</S>
+      <Nil N="LinkType" />
+    </MS>
+  </Obj>
+  <Obj RefId="28">
+    <TNRef RefId="6" />
+    <ToString>file-list.xml</ToString>
+    <Props>
+      <S N="Name">file-list.xml</S>
+      <I64 N="Length">5566</I64>
+      <S N="DirectoryName">/home/ram/random</S>
+      <Obj N="Directory" RefId="29">
+        <TNRef RefId="0" />
+        <ToString>/home/ram/random</ToString>
+        <Props>
+          <S N="Name">random</S>
+          <S N="Parent">ram</S>
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/home/ram/random</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+          <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+          <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+          <S N="Attributes">Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-----</S>
+          <S N="BaseName">random</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <B N="IsReadOnly">false</B>
+      <B N="Exists">true</B>
+      <S N="FullName">/home/ram/random/file-list.xml</S>
+      <S N="Extension">.xml</S>
+      <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+      <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+      <DT N="LastAccessTime">2018-07-02T13:40:15+05:30</DT>
+      <DT N="LastAccessTimeUtc">2018-07-02T08:10:15Z</DT>
+      <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+      <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+      <Obj N="Attributes" RefId="30">
+        <TNRef RefId="1" />
+        <ToString>Normal</ToString>
+        <I32>128</I32>
+      </Obj>
+    </Props>
+    <MS>
+      <S N="PSPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random/file-list.xml</S>
+      <S N="PSParentPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random</S>
+      <S N="PSChildName">file-list.xml</S>
+      <Ref N="PSDrive" RefId="4" />
+      <Ref N="PSProvider" RefId="5" />
+      <B N="PSIsContainer">false</B>
+      <S N="Mode">------</S>
+      <Obj N="VersionInfo" RefId="31">
+        <TNRef RefId="7" />
+        <ToString>File:             /home/ram/random/file-list.xml_x000A_InternalName:     _x000A_OriginalFilename: _x000A_FileVersion:      _x000A_FileDescription:  _x000A_Product:          _x000A_ProductVersion:   _x000A_Debug:            False_x000A_Patched:          False_x000A_PreRelease:       False_x000A_PrivateBuild:     False_x000A_SpecialBuild:     False_x000A_Language:         _x000A_</ToString>
+        <Props>
+          <Nil N="Comments" />
+          <Nil N="CompanyName" />
+          <I32 N="FileBuildPart">0</I32>
+          <Nil N="FileDescription" />
+          <I32 N="FileMajorPart">0</I32>
+          <I32 N="FileMinorPart">0</I32>
+          <S N="FileName">/home/ram/random/file-list.xml</S>
+          <I32 N="FilePrivatePart">0</I32>
+          <Nil N="FileVersion" />
+          <Nil N="InternalName" />
+          <B N="IsDebug">false</B>
+          <B N="IsPatched">false</B>
+          <B N="IsPrivateBuild">false</B>
+          <B N="IsPreRelease">false</B>
+          <B N="IsSpecialBuild">false</B>
+          <Nil N="Language" />
+          <Nil N="LegalCopyright" />
+          <Nil N="LegalTrademarks" />
+          <Nil N="OriginalFilename" />
+          <Nil N="PrivateBuild" />
+          <I32 N="ProductBuildPart">0</I32>
+          <I32 N="ProductMajorPart">0</I32>
+          <I32 N="ProductMinorPart">0</I32>
+          <Nil N="ProductName" />
+          <I32 N="ProductPrivatePart">0</I32>
+          <Nil N="ProductVersion" />
+          <Nil N="SpecialBuild" />
+        </Props>
+        <MS>
+          <Version N="FileVersionRaw">0.0.0.0</Version>
+          <Version N="ProductVersionRaw">0.0.0.0</Version>
+        </MS>
+      </Obj>
+      <S N="BaseName">file-list</S>
+      <Nil N="LinkType" />
+    </MS>
+  </Obj>
+  <Obj RefId="32">
+    <TNRef RefId="6" />
+    <ToString>himalayas.jpg</ToString>
+    <Props>
+      <S N="Name">himalayas.jpg</S>
+      <I64 N="Length">0</I64>
+      <S N="DirectoryName">/home/ram/random</S>
+      <Obj N="Directory" RefId="33">
+        <TNRef RefId="0" />
+        <ToString>/home/ram/random</ToString>
+        <Props>
+          <S N="Name">random</S>
+          <S N="Parent">ram</S>
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/home/ram/random</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+          <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+          <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+          <S N="Attributes">Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-----</S>
+          <S N="BaseName">random</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <B N="IsReadOnly">false</B>
+      <B N="Exists">true</B>
+      <S N="FullName">/home/ram/random/himalayas.jpg</S>
+      <S N="Extension">.jpg</S>
+      <DT N="CreationTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="CreationTimeUtc">2018-06-20T07:45:14Z</DT>
+      <DT N="LastAccessTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="LastAccessTimeUtc">2018-06-20T07:45:14Z</DT>
+      <DT N="LastWriteTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="LastWriteTimeUtc">2018-06-20T07:45:14Z</DT>
+      <Obj N="Attributes" RefId="34">
+        <TNRef RefId="1" />
+        <ToString>Normal</ToString>
+        <I32>128</I32>
+      </Obj>
+    </Props>
+    <MS>
+      <S N="PSPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random/himalayas.jpg</S>
+      <S N="PSParentPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random</S>
+      <S N="PSChildName">himalayas.jpg</S>
+      <Ref N="PSDrive" RefId="4" />
+      <Ref N="PSProvider" RefId="5" />
+      <B N="PSIsContainer">false</B>
+      <S N="Mode">------</S>
+      <Obj N="VersionInfo" RefId="35">
+        <TNRef RefId="7" />
+        <ToString>File:             /home/ram/random/himalayas.jpg_x000A_InternalName:     _x000A_OriginalFilename: _x000A_FileVersion:      _x000A_FileDescription:  _x000A_Product:          _x000A_ProductVersion:   _x000A_Debug:            False_x000A_Patched:          False_x000A_PreRelease:       False_x000A_PrivateBuild:     False_x000A_SpecialBuild:     False_x000A_Language:         _x000A_</ToString>
+        <Props>
+          <Nil N="Comments" />
+          <Nil N="CompanyName" />
+          <I32 N="FileBuildPart">0</I32>
+          <Nil N="FileDescription" />
+          <I32 N="FileMajorPart">0</I32>
+          <I32 N="FileMinorPart">0</I32>
+          <S N="FileName">/home/ram/random/himalayas.jpg</S>
+          <I32 N="FilePrivatePart">0</I32>
+          <Nil N="FileVersion" />
+          <Nil N="InternalName" />
+          <B N="IsDebug">false</B>
+          <B N="IsPatched">false</B>
+          <B N="IsPrivateBuild">false</B>
+          <B N="IsPreRelease">false</B>
+          <B N="IsSpecialBuild">false</B>
+          <Nil N="Language" />
+          <Nil N="LegalCopyright" />
+          <Nil N="LegalTrademarks" />
+          <Nil N="OriginalFilename" />
+          <Nil N="PrivateBuild" />
+          <I32 N="ProductBuildPart">0</I32>
+          <I32 N="ProductMajorPart">0</I32>
+          <I32 N="ProductMinorPart">0</I32>
+          <Nil N="ProductName" />
+          <I32 N="ProductPrivatePart">0</I32>
+          <Nil N="ProductVersion" />
+          <Nil N="SpecialBuild" />
+        </Props>
+        <MS>
+          <Version N="FileVersionRaw">0.0.0.0</Version>
+          <Version N="ProductVersionRaw">0.0.0.0</Version>
+        </MS>
+      </Obj>
+      <S N="BaseName">himalayas</S>
+      <Nil N="LinkType" />
+    </MS>
+  </Obj>
+  <Obj RefId="36">
+    <TNRef RefId="6" />
+    <ToString>matrix-like-wm.mp4</ToString>
+    <Props>
+      <S N="Name">matrix-like-wm.mp4</S>
+      <I64 N="Length">5001938</I64>
+      <S N="DirectoryName">/home/ram/random</S>
+      <Obj N="Directory" RefId="37">
+        <TNRef RefId="0" />
+        <ToString>/home/ram/random</ToString>
+        <Props>
+          <S N="Name">random</S>
+          <S N="Parent">ram</S>
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/home/ram/random</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+          <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+          <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+          <S N="Attributes">Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-----</S>
+          <S N="BaseName">random</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <B N="IsReadOnly">false</B>
+      <B N="Exists">true</B>
+      <S N="FullName">/home/ram/random/matrix-like-wm.mp4</S>
+      <S N="Extension">.mp4</S>
+      <DT N="CreationTime">2018-06-20T13:26:10+05:30</DT>
+      <DT N="CreationTimeUtc">2018-06-20T07:56:10Z</DT>
+      <DT N="LastAccessTime">2018-06-20T13:26:07+05:30</DT>
+      <DT N="LastAccessTimeUtc">2018-06-20T07:56:07Z</DT>
+      <DT N="LastWriteTime">2018-06-20T13:26:10+05:30</DT>
+      <DT N="LastWriteTimeUtc">2018-06-20T07:56:10Z</DT>
+      <Obj N="Attributes" RefId="38">
+        <TNRef RefId="1" />
+        <ToString>Normal</ToString>
+        <I32>128</I32>
+      </Obj>
+    </Props>
+    <MS>
+      <S N="PSPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random/matrix-like-wm.mp4</S>
+      <S N="PSParentPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random</S>
+      <S N="PSChildName">matrix-like-wm.mp4</S>
+      <Ref N="PSDrive" RefId="4" />
+      <Ref N="PSProvider" RefId="5" />
+      <B N="PSIsContainer">false</B>
+      <S N="Mode">------</S>
+      <Obj N="VersionInfo" RefId="39">
+        <TNRef RefId="7" />
+        <ToString>File:             /home/ram/random/matrix-like-wm.mp4_x000A_InternalName:     _x000A_OriginalFilename: _x000A_FileVersion:      _x000A_FileDescription:  _x000A_Product:          _x000A_ProductVersion:   _x000A_Debug:            False_x000A_Patched:          False_x000A_PreRelease:       False_x000A_PrivateBuild:     False_x000A_SpecialBuild:     False_x000A_Language:         _x000A_</ToString>
+        <Props>
+          <Nil N="Comments" />
+          <Nil N="CompanyName" />
+          <I32 N="FileBuildPart">0</I32>
+          <Nil N="FileDescription" />
+          <I32 N="FileMajorPart">0</I32>
+          <I32 N="FileMinorPart">0</I32>
+          <S N="FileName">/home/ram/random/matrix-like-wm.mp4</S>
+          <I32 N="FilePrivatePart">0</I32>
+          <Nil N="FileVersion" />
+          <Nil N="InternalName" />
+          <B N="IsDebug">false</B>
+          <B N="IsPatched">false</B>
+          <B N="IsPrivateBuild">false</B>
+          <B N="IsPreRelease">false</B>
+          <B N="IsSpecialBuild">false</B>
+          <Nil N="Language" />
+          <Nil N="LegalCopyright" />
+          <Nil N="LegalTrademarks" />
+          <Nil N="OriginalFilename" />
+          <Nil N="PrivateBuild" />
+          <I32 N="ProductBuildPart">0</I32>
+          <I32 N="ProductMajorPart">0</I32>
+          <I32 N="ProductMinorPart">0</I32>
+          <Nil N="ProductName" />
+          <I32 N="ProductPrivatePart">0</I32>
+          <Nil N="ProductVersion" />
+          <Nil N="SpecialBuild" />
+        </Props>
+        <MS>
+          <Version N="FileVersionRaw">0.0.0.0</Version>
+          <Version N="ProductVersionRaw">0.0.0.0</Version>
+        </MS>
+      </Obj>
+      <S N="BaseName">matrix-like-wm</S>
+      <Nil N="LinkType" />
+    </MS>
+  </Obj>
+  <Obj RefId="40">
+    <TNRef RefId="6" />
+    <ToString>my-plugin.rb</ToString>
+    <Props>
+      <S N="Name">my-plugin.rb</S>
+      <I64 N="Length">0</I64>
+      <S N="DirectoryName">/home/ram/random</S>
+      <Obj N="Directory" RefId="41">
+        <TNRef RefId="0" />
+        <ToString>/home/ram/random</ToString>
+        <Props>
+          <S N="Name">random</S>
+          <S N="Parent">ram</S>
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/home/ram/random</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+          <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+          <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+          <S N="Attributes">Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-----</S>
+          <S N="BaseName">random</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <B N="IsReadOnly">false</B>
+      <B N="Exists">true</B>
+      <S N="FullName">/home/ram/random/my-plugin.rb</S>
+      <S N="Extension">.rb</S>
+      <DT N="CreationTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="CreationTimeUtc">2018-06-20T07:45:14Z</DT>
+      <DT N="LastAccessTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="LastAccessTimeUtc">2018-06-20T07:45:14Z</DT>
+      <DT N="LastWriteTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="LastWriteTimeUtc">2018-06-20T07:45:14Z</DT>
+      <Obj N="Attributes" RefId="42">
+        <TNRef RefId="1" />
+        <ToString>Normal</ToString>
+        <I32>128</I32>
+      </Obj>
+    </Props>
+    <MS>
+      <S N="PSPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random/my-plugin.rb</S>
+      <S N="PSParentPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random</S>
+      <S N="PSChildName">my-plugin.rb</S>
+      <Ref N="PSDrive" RefId="4" />
+      <Ref N="PSProvider" RefId="5" />
+      <B N="PSIsContainer">false</B>
+      <S N="Mode">------</S>
+      <Obj N="VersionInfo" RefId="43">
+        <TNRef RefId="7" />
+        <ToString>File:             /home/ram/random/my-plugin.rb_x000A_InternalName:     _x000A_OriginalFilename: _x000A_FileVersion:      _x000A_FileDescription:  _x000A_Product:          _x000A_ProductVersion:   _x000A_Debug:            False_x000A_Patched:          False_x000A_PreRelease:       False_x000A_PrivateBuild:     False_x000A_SpecialBuild:     False_x000A_Language:         _x000A_</ToString>
+        <Props>
+          <Nil N="Comments" />
+          <Nil N="CompanyName" />
+          <I32 N="FileBuildPart">0</I32>
+          <Nil N="FileDescription" />
+          <I32 N="FileMajorPart">0</I32>
+          <I32 N="FileMinorPart">0</I32>
+          <S N="FileName">/home/ram/random/my-plugin.rb</S>
+          <I32 N="FilePrivatePart">0</I32>
+          <Nil N="FileVersion" />
+          <Nil N="InternalName" />
+          <B N="IsDebug">false</B>
+          <B N="IsPatched">false</B>
+          <B N="IsPrivateBuild">false</B>
+          <B N="IsPreRelease">false</B>
+          <B N="IsSpecialBuild">false</B>
+          <Nil N="Language" />
+          <Nil N="LegalCopyright" />
+          <Nil N="LegalTrademarks" />
+          <Nil N="OriginalFilename" />
+          <Nil N="PrivateBuild" />
+          <I32 N="ProductBuildPart">0</I32>
+          <I32 N="ProductMajorPart">0</I32>
+          <I32 N="ProductMinorPart">0</I32>
+          <Nil N="ProductName" />
+          <I32 N="ProductPrivatePart">0</I32>
+          <Nil N="ProductVersion" />
+          <Nil N="SpecialBuild" />
+        </Props>
+        <MS>
+          <Version N="FileVersionRaw">0.0.0.0</Version>
+          <Version N="ProductVersionRaw">0.0.0.0</Version>
+        </MS>
+      </Obj>
+      <S N="BaseName">my-plugin</S>
+      <Nil N="LinkType" />
+    </MS>
+  </Obj>
+  <Obj RefId="44">
+    <TNRef RefId="6" />
+    <ToString>piratos-wowa.me.mp3</ToString>
+    <Props>
+      <S N="Name">piratos-wowa.me.mp3</S>
+      <I64 N="Length">3747493</I64>
+      <S N="DirectoryName">/home/ram/random</S>
+      <Obj N="Directory" RefId="45">
+        <TNRef RefId="0" />
+        <ToString>/home/ram/random</ToString>
+        <Props>
+          <S N="Name">random</S>
+          <S N="Parent">ram</S>
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/home/ram/random</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+          <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+          <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+          <S N="Attributes">Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-----</S>
+          <S N="BaseName">random</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <B N="IsReadOnly">false</B>
+      <B N="Exists">true</B>
+      <S N="FullName">/home/ram/random/piratos-wowa.me.mp3</S>
+      <S N="Extension">.mp3</S>
+      <DT N="CreationTime">2018-06-20T13:28:42+05:30</DT>
+      <DT N="CreationTimeUtc">2018-06-20T07:58:42Z</DT>
+      <DT N="LastAccessTime">2018-06-20T13:28:36+05:30</DT>
+      <DT N="LastAccessTimeUtc">2018-06-20T07:58:36Z</DT>
+      <DT N="LastWriteTime">2018-06-20T13:28:42+05:30</DT>
+      <DT N="LastWriteTimeUtc">2018-06-20T07:58:42Z</DT>
+      <Obj N="Attributes" RefId="46">
+        <TNRef RefId="1" />
+        <ToString>Normal</ToString>
+        <I32>128</I32>
+      </Obj>
+    </Props>
+    <MS>
+      <S N="PSPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random/piratos-wowa.me.mp3</S>
+      <S N="PSParentPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random</S>
+      <S N="PSChildName">piratos-wowa.me.mp3</S>
+      <Ref N="PSDrive" RefId="4" />
+      <Ref N="PSProvider" RefId="5" />
+      <B N="PSIsContainer">false</B>
+      <S N="Mode">------</S>
+      <Obj N="VersionInfo" RefId="47">
+        <TNRef RefId="7" />
+        <ToString>File:             /home/ram/random/piratos-wowa.me.mp3_x000A_InternalName:     _x000A_OriginalFilename: _x000A_FileVersion:      _x000A_FileDescription:  _x000A_Product:          _x000A_ProductVersion:   _x000A_Debug:            False_x000A_Patched:          False_x000A_PreRelease:       False_x000A_PrivateBuild:     False_x000A_SpecialBuild:     False_x000A_Language:         _x000A_</ToString>
+        <Props>
+          <Nil N="Comments" />
+          <Nil N="CompanyName" />
+          <I32 N="FileBuildPart">0</I32>
+          <Nil N="FileDescription" />
+          <I32 N="FileMajorPart">0</I32>
+          <I32 N="FileMinorPart">0</I32>
+          <S N="FileName">/home/ram/random/piratos-wowa.me.mp3</S>
+          <I32 N="FilePrivatePart">0</I32>
+          <Nil N="FileVersion" />
+          <Nil N="InternalName" />
+          <B N="IsDebug">false</B>
+          <B N="IsPatched">false</B>
+          <B N="IsPrivateBuild">false</B>
+          <B N="IsPreRelease">false</B>
+          <B N="IsSpecialBuild">false</B>
+          <Nil N="Language" />
+          <Nil N="LegalCopyright" />
+          <Nil N="LegalTrademarks" />
+          <Nil N="OriginalFilename" />
+          <Nil N="PrivateBuild" />
+          <I32 N="ProductBuildPart">0</I32>
+          <I32 N="ProductMajorPart">0</I32>
+          <I32 N="ProductMinorPart">0</I32>
+          <Nil N="ProductName" />
+          <I32 N="ProductPrivatePart">0</I32>
+          <Nil N="ProductVersion" />
+          <Nil N="SpecialBuild" />
+        </Props>
+        <MS>
+          <Version N="FileVersionRaw">0.0.0.0</Version>
+          <Version N="ProductVersionRaw">0.0.0.0</Version>
+        </MS>
+      </Obj>
+      <S N="BaseName">piratos-wowa.me</S>
+      <Nil N="LinkType" />
+    </MS>
+  </Obj>
+  <Obj RefId="48">
+    <TNRef RefId="6" />
+    <ToString>random-text-1.txt</ToString>
+    <Props>
+      <S N="Name">random-text-1.txt</S>
+      <I64 N="Length">4680</I64>
+      <S N="DirectoryName">/home/ram/random</S>
+      <Obj N="Directory" RefId="49">
+        <TNRef RefId="0" />
+        <ToString>/home/ram/random</ToString>
+        <Props>
+          <S N="Name">random</S>
+          <S N="Parent">ram</S>
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/home/ram/random</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+          <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+          <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+          <S N="Attributes">Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-----</S>
+          <S N="BaseName">random</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <B N="IsReadOnly">false</B>
+      <B N="Exists">true</B>
+      <S N="FullName">/home/ram/random/random-text-1.txt</S>
+      <S N="Extension">.txt</S>
+      <DT N="CreationTime">2018-07-01T18:13:27+05:30</DT>
+      <DT N="CreationTimeUtc">2018-07-01T12:43:27Z</DT>
+      <DT N="LastAccessTime">2018-07-01T18:13:27+05:30</DT>
+      <DT N="LastAccessTimeUtc">2018-07-01T12:43:27Z</DT>
+      <DT N="LastWriteTime">2018-07-01T18:13:27+05:30</DT>
+      <DT N="LastWriteTimeUtc">2018-07-01T12:43:27Z</DT>
+      <Obj N="Attributes" RefId="50">
+        <TNRef RefId="1" />
+        <ToString>Normal</ToString>
+        <I32>128</I32>
+      </Obj>
+    </Props>
+    <MS>
+      <S N="PSPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random/random-text-1.txt</S>
+      <S N="PSParentPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random</S>
+      <S N="PSChildName">random-text-1.txt</S>
+      <Ref N="PSDrive" RefId="4" />
+      <Ref N="PSProvider" RefId="5" />
+      <B N="PSIsContainer">false</B>
+      <S N="Mode">------</S>
+      <Obj N="VersionInfo" RefId="51">
+        <TNRef RefId="7" />
+        <ToString>File:             /home/ram/random/random-text-1.txt_x000A_InternalName:     _x000A_OriginalFilename: _x000A_FileVersion:      _x000A_FileDescription:  _x000A_Product:          _x000A_ProductVersion:   _x000A_Debug:            False_x000A_Patched:          False_x000A_PreRelease:       False_x000A_PrivateBuild:     False_x000A_SpecialBuild:     False_x000A_Language:         _x000A_</ToString>
+        <Props>
+          <Nil N="Comments" />
+          <Nil N="CompanyName" />
+          <I32 N="FileBuildPart">0</I32>
+          <Nil N="FileDescription" />
+          <I32 N="FileMajorPart">0</I32>
+          <I32 N="FileMinorPart">0</I32>
+          <S N="FileName">/home/ram/random/random-text-1.txt</S>
+          <I32 N="FilePrivatePart">0</I32>
+          <Nil N="FileVersion" />
+          <Nil N="InternalName" />
+          <B N="IsDebug">false</B>
+          <B N="IsPatched">false</B>
+          <B N="IsPrivateBuild">false</B>
+          <B N="IsPreRelease">false</B>
+          <B N="IsSpecialBuild">false</B>
+          <Nil N="Language" />
+          <Nil N="LegalCopyright" />
+          <Nil N="LegalTrademarks" />
+          <Nil N="OriginalFilename" />
+          <Nil N="PrivateBuild" />
+          <I32 N="ProductBuildPart">0</I32>
+          <I32 N="ProductMajorPart">0</I32>
+          <I32 N="ProductMinorPart">0</I32>
+          <Nil N="ProductName" />
+          <I32 N="ProductPrivatePart">0</I32>
+          <Nil N="ProductVersion" />
+          <Nil N="SpecialBuild" />
+        </Props>
+        <MS>
+          <Version N="FileVersionRaw">0.0.0.0</Version>
+          <Version N="ProductVersionRaw">0.0.0.0</Version>
+        </MS>
+      </Obj>
+      <S N="BaseName">random-text-1</S>
+      <Nil N="LinkType" />
+    </MS>
+  </Obj>
+  <Obj RefId="52">
+    <TNRef RefId="6" />
+    <ToString>random-text-2.txt</ToString>
+    <Props>
+      <S N="Name">random-text-2.txt</S>
+      <I64 N="Length">4500</I64>
+      <S N="DirectoryName">/home/ram/random</S>
+      <Obj N="Directory" RefId="53">
+        <TNRef RefId="0" />
+        <ToString>/home/ram/random</ToString>
+        <Props>
+          <S N="Name">random</S>
+          <S N="Parent">ram</S>
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/home/ram/random</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+          <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+          <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+          <S N="Attributes">Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-----</S>
+          <S N="BaseName">random</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <B N="IsReadOnly">false</B>
+      <B N="Exists">true</B>
+      <S N="FullName">/home/ram/random/random-text-2.txt</S>
+      <S N="Extension">.txt</S>
+      <DT N="CreationTime">2018-07-01T18:14:28+05:30</DT>
+      <DT N="CreationTimeUtc">2018-07-01T12:44:28Z</DT>
+      <DT N="LastAccessTime">2018-07-01T18:14:28+05:30</DT>
+      <DT N="LastAccessTimeUtc">2018-07-01T12:44:28Z</DT>
+      <DT N="LastWriteTime">2018-07-01T18:14:28+05:30</DT>
+      <DT N="LastWriteTimeUtc">2018-07-01T12:44:28Z</DT>
+      <Obj N="Attributes" RefId="54">
+        <TNRef RefId="1" />
+        <ToString>Normal</ToString>
+        <I32>128</I32>
+      </Obj>
+    </Props>
+    <MS>
+      <S N="PSPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random/random-text-2.txt</S>
+      <S N="PSParentPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random</S>
+      <S N="PSChildName">random-text-2.txt</S>
+      <Ref N="PSDrive" RefId="4" />
+      <Ref N="PSProvider" RefId="5" />
+      <B N="PSIsContainer">false</B>
+      <S N="Mode">------</S>
+      <Obj N="VersionInfo" RefId="55">
+        <TNRef RefId="7" />
+        <ToString>File:             /home/ram/random/random-text-2.txt_x000A_InternalName:     _x000A_OriginalFilename: _x000A_FileVersion:      _x000A_FileDescription:  _x000A_Product:          _x000A_ProductVersion:   _x000A_Debug:            False_x000A_Patched:          False_x000A_PreRelease:       False_x000A_PrivateBuild:     False_x000A_SpecialBuild:     False_x000A_Language:         _x000A_</ToString>
+        <Props>
+          <Nil N="Comments" />
+          <Nil N="CompanyName" />
+          <I32 N="FileBuildPart">0</I32>
+          <Nil N="FileDescription" />
+          <I32 N="FileMajorPart">0</I32>
+          <I32 N="FileMinorPart">0</I32>
+          <S N="FileName">/home/ram/random/random-text-2.txt</S>
+          <I32 N="FilePrivatePart">0</I32>
+          <Nil N="FileVersion" />
+          <Nil N="InternalName" />
+          <B N="IsDebug">false</B>
+          <B N="IsPatched">false</B>
+          <B N="IsPrivateBuild">false</B>
+          <B N="IsPreRelease">false</B>
+          <B N="IsSpecialBuild">false</B>
+          <Nil N="Language" />
+          <Nil N="LegalCopyright" />
+          <Nil N="LegalTrademarks" />
+          <Nil N="OriginalFilename" />
+          <Nil N="PrivateBuild" />
+          <I32 N="ProductBuildPart">0</I32>
+          <I32 N="ProductMajorPart">0</I32>
+          <I32 N="ProductMinorPart">0</I32>
+          <Nil N="ProductName" />
+          <I32 N="ProductPrivatePart">0</I32>
+          <Nil N="ProductVersion" />
+          <Nil N="SpecialBuild" />
+        </Props>
+        <MS>
+          <Version N="FileVersionRaw">0.0.0.0</Version>
+          <Version N="ProductVersionRaw">0.0.0.0</Version>
+        </MS>
+      </Obj>
+      <S N="BaseName">random-text-2</S>
+      <Nil N="LinkType" />
+    </MS>
+  </Obj>
+  <Obj RefId="56">
+    <TNRef RefId="6" />
+    <ToString>screenshot-001.png</ToString>
+    <Props>
+      <S N="Name">screenshot-001.png</S>
+      <I64 N="Length">0</I64>
+      <S N="DirectoryName">/home/ram/random</S>
+      <Obj N="Directory" RefId="57">
+        <TNRef RefId="0" />
+        <ToString>/home/ram/random</ToString>
+        <Props>
+          <S N="Name">random</S>
+          <S N="Parent">ram</S>
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/home/ram/random</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+          <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+          <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+          <S N="Attributes">Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-----</S>
+          <S N="BaseName">random</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <B N="IsReadOnly">false</B>
+      <B N="Exists">true</B>
+      <S N="FullName">/home/ram/random/screenshot-001.png</S>
+      <S N="Extension">.png</S>
+      <DT N="CreationTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="CreationTimeUtc">2018-06-20T07:45:14Z</DT>
+      <DT N="LastAccessTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="LastAccessTimeUtc">2018-06-20T07:45:14Z</DT>
+      <DT N="LastWriteTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="LastWriteTimeUtc">2018-06-20T07:45:14Z</DT>
+      <Obj N="Attributes" RefId="58">
+        <TNRef RefId="1" />
+        <ToString>Normal</ToString>
+        <I32>128</I32>
+      </Obj>
+    </Props>
+    <MS>
+      <S N="PSPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random/screenshot-001.png</S>
+      <S N="PSParentPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random</S>
+      <S N="PSChildName">screenshot-001.png</S>
+      <Ref N="PSDrive" RefId="4" />
+      <Ref N="PSProvider" RefId="5" />
+      <B N="PSIsContainer">false</B>
+      <S N="Mode">------</S>
+      <Obj N="VersionInfo" RefId="59">
+        <TNRef RefId="7" />
+        <ToString>File:             /home/ram/random/screenshot-001.png_x000A_InternalName:     _x000A_OriginalFilename: _x000A_FileVersion:      _x000A_FileDescription:  _x000A_Product:          _x000A_ProductVersion:   _x000A_Debug:            False_x000A_Patched:          False_x000A_PreRelease:       False_x000A_PrivateBuild:     False_x000A_SpecialBuild:     False_x000A_Language:         _x000A_</ToString>
+        <Props>
+          <Nil N="Comments" />
+          <Nil N="CompanyName" />
+          <I32 N="FileBuildPart">0</I32>
+          <Nil N="FileDescription" />
+          <I32 N="FileMajorPart">0</I32>
+          <I32 N="FileMinorPart">0</I32>
+          <S N="FileName">/home/ram/random/screenshot-001.png</S>
+          <I32 N="FilePrivatePart">0</I32>
+          <Nil N="FileVersion" />
+          <Nil N="InternalName" />
+          <B N="IsDebug">false</B>
+          <B N="IsPatched">false</B>
+          <B N="IsPrivateBuild">false</B>
+          <B N="IsPreRelease">false</B>
+          <B N="IsSpecialBuild">false</B>
+          <Nil N="Language" />
+          <Nil N="LegalCopyright" />
+          <Nil N="LegalTrademarks" />
+          <Nil N="OriginalFilename" />
+          <Nil N="PrivateBuild" />
+          <I32 N="ProductBuildPart">0</I32>
+          <I32 N="ProductMajorPart">0</I32>
+          <I32 N="ProductMinorPart">0</I32>
+          <Nil N="ProductName" />
+          <I32 N="ProductPrivatePart">0</I32>
+          <Nil N="ProductVersion" />
+          <Nil N="SpecialBuild" />
+        </Props>
+        <MS>
+          <Version N="FileVersionRaw">0.0.0.0</Version>
+          <Version N="ProductVersionRaw">0.0.0.0</Version>
+        </MS>
+      </Obj>
+      <S N="BaseName">screenshot-001</S>
+      <Nil N="LinkType" />
+    </MS>
+  </Obj>
+  <Obj RefId="60">
+    <TNRef RefId="6" />
+    <ToString>screenshot-002.png</ToString>
+    <Props>
+      <S N="Name">screenshot-002.png</S>
+      <I64 N="Length">0</I64>
+      <S N="DirectoryName">/home/ram/random</S>
+      <Obj N="Directory" RefId="61">
+        <TNRef RefId="0" />
+        <ToString>/home/ram/random</ToString>
+        <Props>
+          <S N="Name">random</S>
+          <S N="Parent">ram</S>
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/home/ram/random</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+          <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+          <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+          <S N="Attributes">Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-----</S>
+          <S N="BaseName">random</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <B N="IsReadOnly">false</B>
+      <B N="Exists">true</B>
+      <S N="FullName">/home/ram/random/screenshot-002.png</S>
+      <S N="Extension">.png</S>
+      <DT N="CreationTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="CreationTimeUtc">2018-06-20T07:45:14Z</DT>
+      <DT N="LastAccessTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="LastAccessTimeUtc">2018-06-20T07:45:14Z</DT>
+      <DT N="LastWriteTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="LastWriteTimeUtc">2018-06-20T07:45:14Z</DT>
+      <Obj N="Attributes" RefId="62">
+        <TNRef RefId="1" />
+        <ToString>Normal</ToString>
+        <I32>128</I32>
+      </Obj>
+    </Props>
+    <MS>
+      <S N="PSPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random/screenshot-002.png</S>
+      <S N="PSParentPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random</S>
+      <S N="PSChildName">screenshot-002.png</S>
+      <Ref N="PSDrive" RefId="4" />
+      <Ref N="PSProvider" RefId="5" />
+      <B N="PSIsContainer">false</B>
+      <S N="Mode">------</S>
+      <Obj N="VersionInfo" RefId="63">
+        <TNRef RefId="7" />
+        <ToString>File:             /home/ram/random/screenshot-002.png_x000A_InternalName:     _x000A_OriginalFilename: _x000A_FileVersion:      _x000A_FileDescription:  _x000A_Product:          _x000A_ProductVersion:   _x000A_Debug:            False_x000A_Patched:          False_x000A_PreRelease:       False_x000A_PrivateBuild:     False_x000A_SpecialBuild:     False_x000A_Language:         _x000A_</ToString>
+        <Props>
+          <Nil N="Comments" />
+          <Nil N="CompanyName" />
+          <I32 N="FileBuildPart">0</I32>
+          <Nil N="FileDescription" />
+          <I32 N="FileMajorPart">0</I32>
+          <I32 N="FileMinorPart">0</I32>
+          <S N="FileName">/home/ram/random/screenshot-002.png</S>
+          <I32 N="FilePrivatePart">0</I32>
+          <Nil N="FileVersion" />
+          <Nil N="InternalName" />
+          <B N="IsDebug">false</B>
+          <B N="IsPatched">false</B>
+          <B N="IsPrivateBuild">false</B>
+          <B N="IsPreRelease">false</B>
+          <B N="IsSpecialBuild">false</B>
+          <Nil N="Language" />
+          <Nil N="LegalCopyright" />
+          <Nil N="LegalTrademarks" />
+          <Nil N="OriginalFilename" />
+          <Nil N="PrivateBuild" />
+          <I32 N="ProductBuildPart">0</I32>
+          <I32 N="ProductMajorPart">0</I32>
+          <I32 N="ProductMinorPart">0</I32>
+          <Nil N="ProductName" />
+          <I32 N="ProductPrivatePart">0</I32>
+          <Nil N="ProductVersion" />
+          <Nil N="SpecialBuild" />
+        </Props>
+        <MS>
+          <Version N="FileVersionRaw">0.0.0.0</Version>
+          <Version N="ProductVersionRaw">0.0.0.0</Version>
+        </MS>
+      </Obj>
+      <S N="BaseName">screenshot-002</S>
+      <Nil N="LinkType" />
+    </MS>
+  </Obj>
+  <Obj RefId="64">
+    <TNRef RefId="6" />
+    <ToString>screenshot-003.png</ToString>
+    <Props>
+      <S N="Name">screenshot-003.png</S>
+      <I64 N="Length">0</I64>
+      <S N="DirectoryName">/home/ram/random</S>
+      <Obj N="Directory" RefId="65">
+        <TNRef RefId="0" />
+        <ToString>/home/ram/random</ToString>
+        <Props>
+          <S N="Name">random</S>
+          <S N="Parent">ram</S>
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/home/ram/random</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+          <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+          <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+          <S N="Attributes">Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-----</S>
+          <S N="BaseName">random</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <B N="IsReadOnly">false</B>
+      <B N="Exists">true</B>
+      <S N="FullName">/home/ram/random/screenshot-003.png</S>
+      <S N="Extension">.png</S>
+      <DT N="CreationTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="CreationTimeUtc">2018-06-20T07:45:14Z</DT>
+      <DT N="LastAccessTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="LastAccessTimeUtc">2018-06-20T07:45:14Z</DT>
+      <DT N="LastWriteTime">2018-06-20T13:15:14+05:30</DT>
+      <DT N="LastWriteTimeUtc">2018-06-20T07:45:14Z</DT>
+      <Obj N="Attributes" RefId="66">
+        <TNRef RefId="1" />
+        <ToString>Normal</ToString>
+        <I32>128</I32>
+      </Obj>
+    </Props>
+    <MS>
+      <S N="PSPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random/screenshot-003.png</S>
+      <S N="PSParentPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random</S>
+      <S N="PSChildName">screenshot-003.png</S>
+      <Ref N="PSDrive" RefId="4" />
+      <Ref N="PSProvider" RefId="5" />
+      <B N="PSIsContainer">false</B>
+      <S N="Mode">------</S>
+      <Obj N="VersionInfo" RefId="67">
+        <TNRef RefId="7" />
+        <ToString>File:             /home/ram/random/screenshot-003.png_x000A_InternalName:     _x000A_OriginalFilename: _x000A_FileVersion:      _x000A_FileDescription:  _x000A_Product:          _x000A_ProductVersion:   _x000A_Debug:            False_x000A_Patched:          False_x000A_PreRelease:       False_x000A_PrivateBuild:     False_x000A_SpecialBuild:     False_x000A_Language:         _x000A_</ToString>
+        <Props>
+          <Nil N="Comments" />
+          <Nil N="CompanyName" />
+          <I32 N="FileBuildPart">0</I32>
+          <Nil N="FileDescription" />
+          <I32 N="FileMajorPart">0</I32>
+          <I32 N="FileMinorPart">0</I32>
+          <S N="FileName">/home/ram/random/screenshot-003.png</S>
+          <I32 N="FilePrivatePart">0</I32>
+          <Nil N="FileVersion" />
+          <Nil N="InternalName" />
+          <B N="IsDebug">false</B>
+          <B N="IsPatched">false</B>
+          <B N="IsPrivateBuild">false</B>
+          <B N="IsPreRelease">false</B>
+          <B N="IsSpecialBuild">false</B>
+          <Nil N="Language" />
+          <Nil N="LegalCopyright" />
+          <Nil N="LegalTrademarks" />
+          <Nil N="OriginalFilename" />
+          <Nil N="PrivateBuild" />
+          <I32 N="ProductBuildPart">0</I32>
+          <I32 N="ProductMajorPart">0</I32>
+          <I32 N="ProductMinorPart">0</I32>
+          <Nil N="ProductName" />
+          <I32 N="ProductPrivatePart">0</I32>
+          <Nil N="ProductVersion" />
+          <Nil N="SpecialBuild" />
+        </Props>
+        <MS>
+          <Version N="FileVersionRaw">0.0.0.0</Version>
+          <Version N="ProductVersionRaw">0.0.0.0</Version>
+        </MS>
+      </Obj>
+      <S N="BaseName">screenshot-003</S>
+      <Nil N="LinkType" />
+    </MS>
+  </Obj>
+  <Obj RefId="68">
+    <TNRef RefId="6" />
+    <ToString>volcano-copy.jpg</ToString>
+    <Props>
+      <S N="Name">volcano-copy.jpg</S>
+      <I64 N="Length">78954</I64>
+      <S N="DirectoryName">/home/ram/random</S>
+      <Obj N="Directory" RefId="69">
+        <TNRef RefId="0" />
+        <ToString>/home/ram/random</ToString>
+        <Props>
+          <S N="Name">random</S>
+          <S N="Parent">ram</S>
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/home/ram/random</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+          <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+          <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+          <S N="Attributes">Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-----</S>
+          <S N="BaseName">random</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <B N="IsReadOnly">false</B>
+      <B N="Exists">true</B>
+      <S N="FullName">/home/ram/random/volcano-copy.jpg</S>
+      <S N="Extension">.jpg</S>
+      <DT N="CreationTime">2018-06-30T11:34:15+05:30</DT>
+      <DT N="CreationTimeUtc">2018-06-30T06:04:15Z</DT>
+      <DT N="LastAccessTime">2018-06-30T11:31:25+05:30</DT>
+      <DT N="LastAccessTimeUtc">2018-06-30T06:01:25Z</DT>
+      <DT N="LastWriteTime">2018-06-30T11:34:15+05:30</DT>
+      <DT N="LastWriteTimeUtc">2018-06-30T06:04:15Z</DT>
+      <Obj N="Attributes" RefId="70">
+        <TNRef RefId="1" />
+        <ToString>Normal</ToString>
+        <I32>128</I32>
+      </Obj>
+    </Props>
+    <MS>
+      <S N="PSPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random/volcano-copy.jpg</S>
+      <S N="PSParentPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random</S>
+      <S N="PSChildName">volcano-copy.jpg</S>
+      <Ref N="PSDrive" RefId="4" />
+      <Ref N="PSProvider" RefId="5" />
+      <B N="PSIsContainer">false</B>
+      <S N="Mode">------</S>
+      <Obj N="VersionInfo" RefId="71">
+        <TNRef RefId="7" />
+        <ToString>File:             /home/ram/random/volcano-copy.jpg_x000A_InternalName:     _x000A_OriginalFilename: _x000A_FileVersion:      _x000A_FileDescription:  _x000A_Product:          _x000A_ProductVersion:   _x000A_Debug:            False_x000A_Patched:          False_x000A_PreRelease:       False_x000A_PrivateBuild:     False_x000A_SpecialBuild:     False_x000A_Language:         _x000A_</ToString>
+        <Props>
+          <Nil N="Comments" />
+          <Nil N="CompanyName" />
+          <I32 N="FileBuildPart">0</I32>
+          <Nil N="FileDescription" />
+          <I32 N="FileMajorPart">0</I32>
+          <I32 N="FileMinorPart">0</I32>
+          <S N="FileName">/home/ram/random/volcano-copy.jpg</S>
+          <I32 N="FilePrivatePart">0</I32>
+          <Nil N="FileVersion" />
+          <Nil N="InternalName" />
+          <B N="IsDebug">false</B>
+          <B N="IsPatched">false</B>
+          <B N="IsPrivateBuild">false</B>
+          <B N="IsPreRelease">false</B>
+          <B N="IsSpecialBuild">false</B>
+          <Nil N="Language" />
+          <Nil N="LegalCopyright" />
+          <Nil N="LegalTrademarks" />
+          <Nil N="OriginalFilename" />
+          <Nil N="PrivateBuild" />
+          <I32 N="ProductBuildPart">0</I32>
+          <I32 N="ProductMajorPart">0</I32>
+          <I32 N="ProductMinorPart">0</I32>
+          <Nil N="ProductName" />
+          <I32 N="ProductPrivatePart">0</I32>
+          <Nil N="ProductVersion" />
+          <Nil N="SpecialBuild" />
+        </Props>
+        <MS>
+          <Version N="FileVersionRaw">0.0.0.0</Version>
+          <Version N="ProductVersionRaw">0.0.0.0</Version>
+        </MS>
+      </Obj>
+      <S N="BaseName">volcano-copy</S>
+      <Nil N="LinkType" />
+    </MS>
+  </Obj>
+  <Obj RefId="72">
+    <TNRef RefId="6" />
+    <ToString>volcano.jpg</ToString>
+    <Props>
+      <S N="Name">volcano.jpg</S>
+      <I64 N="Length">63538</I64>
+      <S N="DirectoryName">/home/ram/random</S>
+      <Obj N="Directory" RefId="73">
+        <TNRef RefId="0" />
+        <ToString>/home/ram/random</ToString>
+        <Props>
+          <S N="Name">random</S>
+          <S N="Parent">ram</S>
+          <B N="Exists">true</B>
+          <S N="Root">/</S>
+          <S N="FullName">/home/ram/random</S>
+          <S N="Extension"></S>
+          <DT N="CreationTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="CreationTimeUtc">2018-07-02T08:10:15Z</DT>
+          <DT N="LastAccessTime">2018-06-20T13:15:02+05:30</DT>
+          <DT N="LastAccessTimeUtc">2018-06-20T07:45:02Z</DT>
+          <DT N="LastWriteTime">2018-07-02T13:40:15+05:30</DT>
+          <DT N="LastWriteTimeUtc">2018-07-02T08:10:15Z</DT>
+          <S N="Attributes">Directory</S>
+        </Props>
+        <MS>
+          <S N="Mode">d-----</S>
+          <S N="BaseName">random</S>
+          <Nil N="LinkType" />
+        </MS>
+      </Obj>
+      <B N="IsReadOnly">false</B>
+      <B N="Exists">true</B>
+      <S N="FullName">/home/ram/random/volcano.jpg</S>
+      <S N="Extension">.jpg</S>
+      <DT N="CreationTime">2018-06-20T13:23:23+05:30</DT>
+      <DT N="CreationTimeUtc">2018-06-20T07:53:23Z</DT>
+      <DT N="LastAccessTime">2018-06-20T13:23:23+05:30</DT>
+      <DT N="LastAccessTimeUtc">2018-06-20T07:53:23Z</DT>
+      <DT N="LastWriteTime">2018-06-20T13:23:23+05:30</DT>
+      <DT N="LastWriteTimeUtc">2018-06-20T07:53:23Z</DT>
+      <Obj N="Attributes" RefId="74">
+        <TNRef RefId="1" />
+        <ToString>Normal</ToString>
+        <I32>128</I32>
+      </Obj>
+    </Props>
+    <MS>
+      <S N="PSPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random/volcano.jpg</S>
+      <S N="PSParentPath">Microsoft.PowerShell.Core\FileSystem::/home/ram/random</S>
+      <S N="PSChildName">volcano.jpg</S>
+      <Ref N="PSDrive" RefId="4" />
+      <Ref N="PSProvider" RefId="5" />
+      <B N="PSIsContainer">false</B>
+      <S N="Mode">------</S>
+      <Obj N="VersionInfo" RefId="75">
+        <TNRef RefId="7" />
+        <ToString>File:             /home/ram/random/volcano.jpg_x000A_InternalName:     _x000A_OriginalFilename: _x000A_FileVersion:      _x000A_FileDescription:  _x000A_Product:          _x000A_ProductVersion:   _x000A_Debug:            False_x000A_Patched:          False_x000A_PreRelease:       False_x000A_PrivateBuild:     False_x000A_SpecialBuild:     False_x000A_Language:         _x000A_</ToString>
+        <Props>
+          <Nil N="Comments" />
+          <Nil N="CompanyName" />
+          <I32 N="FileBuildPart">0</I32>
+          <Nil N="FileDescription" />
+          <I32 N="FileMajorPart">0</I32>
+          <I32 N="FileMinorPart">0</I32>
+          <S N="FileName">/home/ram/random/volcano.jpg</S>
+          <I32 N="FilePrivatePart">0</I32>
+          <Nil N="FileVersion" />
+          <Nil N="InternalName" />
+          <B N="IsDebug">false</B>
+          <B N="IsPatched">false</B>
+          <B N="IsPrivateBuild">false</B>
+          <B N="IsPreRelease">false</B>
+          <B N="IsSpecialBuild">false</B>
+          <Nil N="Language" />
+          <Nil N="LegalCopyright" />
+          <Nil N="LegalTrademarks" />
+          <Nil N="OriginalFilename" />
+          <Nil N="PrivateBuild" />
+          <I32 N="ProductBuildPart">0</I32>
+          <I32 N="ProductMajorPart">0</I32>
+          <I32 N="ProductMinorPart">0</I32>
+          <Nil N="ProductName" />
+          <I32 N="ProductPrivatePart">0</I32>
+          <Nil N="ProductVersion" />
+          <Nil N="SpecialBuild" />
+        </Props>
+        <MS>
+          <Version N="FileVersionRaw">0.0.0.0</Version>
+          <Version N="ProductVersionRaw">0.0.0.0</Version>
+        </MS>
+      </Obj>
+      <S N="BaseName">volcano</S>
+      <Nil N="LinkType" />
+    </MS>
+  </Obj>
+</Objs>
