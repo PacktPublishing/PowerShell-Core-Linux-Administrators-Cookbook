@@ -3,7 +3,7 @@ function Initialize-PacktPs6CoreLinuxLab {
         # The location where the files need to be created
         [Parameter(Position=1)]
         [string]
-        $Path = (Join-Path -Path $env:HOME -ChildPath random)
+        $Path = (Join-Path -Path $HOME -ChildPath random)
     )
 
     process {
@@ -11,12 +11,10 @@ function Initialize-PacktPs6CoreLinuxLab {
 
         $CitiesPath = Join-Path -Path $Path -ChildPath cities
 
-        Write-Warning "This is a quick-and-dirty function. Use this only to create your lab objects; not to learn scripting."
+        Write-Warning "This is a quick-and-dirty function. Use this only to create your lab objects; not to learn PowerShell scripting."
 
         New-Item $CitiesPath -ItemType Directory -Force | Out-Null
-
-        Set-Location $Path
-        New-Item 'random-text.txt', 'himalayas.jpg', 'crunched-numbers.csv', 'screenshot-001.png', 'screenshot-002.png', 'screenshot-003.png', 'demo.doc', 'my-plugin.rb' -ItemType File
+        'random-text.txt', 'himalayas.jpg', 'crunched-numbers.csv', 'screenshot-001.png', 'screenshot-002.png', 'screenshot-003.png', 'demo.doc', 'my-plugin.rb' | ForEach-Object { New-Item -Path (Join-Path -Path $Path -ChildPath $PSItem) -ItemType File }
 
         Write-Host 'Downloading city pages from Wikipedia'
         Invoke-WebRequest -Uri 'https://en.wikipedia.org/wiki/Mumbai' -OutFile (Join-Path -Path $CitiesPath -ChildPath mumbai.html)
