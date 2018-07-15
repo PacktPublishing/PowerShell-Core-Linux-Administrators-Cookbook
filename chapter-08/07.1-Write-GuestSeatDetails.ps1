@@ -1,4 +1,4 @@
-$Guests = Import-Csv './chapter-07/05-Write-GuestSeatDetails.csv'
+$Guests = Import-Csv './chapter-08/05-Write-GuestSeatDetails.csv'
 $CurrentGuest = 0
 
 while ($CurrentGuest -lt $Guests.Length) {

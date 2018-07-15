@@ -1,4 +1,4 @@
-$Guests = Import-Csv './chapter-07/05-Write-GuestSeatDetails.csv'
+$Guests = Import-Csv './chapter-08/05-Write-GuestSeatDetails.csv'
 
 foreach ($Guest in $Guests) {
     $RowIdentifier = [byte][char](($Guest.Seat -split '-')[0].ToUpper())
