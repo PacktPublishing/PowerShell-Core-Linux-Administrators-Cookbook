@@ -1,5 +1,10 @@
 # Working with Strings
 
+This cheatcheet is divided into two parts:
+
+1. *Operators in PowerShell*, which is directly referred to in the chatpter.
+2. *String operations in PowerShell*, which is, well, the usual cheatsheet.
+
 ## Operators in PowerShell
 
 Enter the following at the prompt.
@@ -150,3 +155,5 @@ Oh, you thought that initialising a variable, splitting a pangram, and then usin
 PS> Remove-Variable Pangram
 PS> $Pangram = 'The quick brown fox jumps over the lazy dog' -split ' '
 ```
+
+## String operations in PowerShell
