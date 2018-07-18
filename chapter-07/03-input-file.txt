@@ -1,0 +1,9 @@
+./dir-01/dir-07/dir-09/dir-13/
+./dir-02/dir-05/dir-06/
+./dir-03/dir-08/dir-10/
+./dir-04/dir-11/dir-12/dir-14/
+./dir-04/dir-11/dir-12/dir-15/
+./dir-04/dir-11/dir-12/dir-16/
+./dir-04/dir-11/dir-12/dir-17/
+./dir-04/dir-11/dir-12/dir-18/dir-19/
+./dir-04/dir-11/dir-12/dir-18/dir-20/
