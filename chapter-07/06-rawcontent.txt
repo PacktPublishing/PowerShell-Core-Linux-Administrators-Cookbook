@@ -1,8 +1,12 @@
 ---
 title: Command line, anybody?
+date: '2017-04-01 21:17'
+tags:
+- windows
+category: tyro
 ---
 
-We're Windows people. We love the GUI. We don't use the boring plain window with grey text. All that is so yesterday, aye? We are more used to moving the mouse, clicking at places, and then touch the keyboard only when we have something to type. We love that experience, be it Aero effect, or some other sassy visuals. Command line, again, is so yesterday.
+We're Windows people. We love the GUI. We don't use the boring plain window with grey text. All that is so yesterday, aye? We are more used to moving the mouse, clicking at places, and then touch the keyboard only when we have something to type. We love that experience, be it Aero&trade; effect, or some other sassy visuals. Command line, again, is so yesterday.
 
 Fair? Perhaps. Efficient?
 
@@ -18,15 +22,19 @@ Less than three seconds. Seriously, try it! All you have to do now is go to wher
 
 My point is, the console is our friend. And friends, we embrace. Embrace the console, give it a shot. You'll get addicted to the efficiency and the speed.
 
-It's now time to download Windows PowerShell. The version linked here works on all computers with Windows 7 SP1 and above. Just make sure you download the right file based on whether your copy of Windows is a 32-bit one or a 64-bit one.
+It's now time to download Windows PowerShell.
 
-It will ask you for a restart, so be prepared. Once it's done, you're all set to follow this blog. If you'd like to get updates very time a post is added, follow me on Facebook or Twitter.
+It will ask you for a restart, so be prepared. Once it's done, you're all set to follow this blog. If you'd like to get updates very time a post is added, follow me on Facebook.
 
 ---
 title: Basics of Windows
+date: '2017-04-03 12:00'
+tags:
+- windows
+category: tyro
 ---
 
-Among all the jazz of ClearType fonts and graphics, we often take for granted what is actually some serious task---running the hardware of a computer. Ever wondered how different the actual working of a computer is, compared to what we see on the screen? In reality, it's overwhelmingly difficult to imagine how computers work, especially today. It's hard to believe that two voltage-based states of a bunch of transistors and gates are able to show to us what we see on the screen. These things finish off some tasks in seconds, that humans would usually take anywhere from a few minutes to several days to accomplish.
+Among all the jazz of ClearType fonts and graphics, we often take for granted what is actually some serious task&mdash;running the hardware of a computer. Ever wondered how different the actual working of a computer is, compared to what we see on the screen? In reality, it's overwhelmingly difficult to imagine how computers work, especially today. It's hard to believe that two voltage-based states of a bunch of transistors and gates are able to show to us what we see on the screen. These things finish off some tasks in seconds, that humans would usually take anywhere from a few minutes to several days to accomplish.
 
 To try to fathom what happens inside a computer (and this is of some importance), let's go back to the days of DOS. As we all know from common sense today, a computer is nothing but a bunch of hardware which runs some software to get work done. But how the software talks to the hardware is something that we need to know.
 
@@ -69,6 +77,11 @@ The post is quite long for a read. Let's give ourselves a break here, and resume
 
 ---
 title: Enter PowerShell
+date: '2017-04-04 12:00'
+tags:
+- windows
+- powershell
+category: tyro
 ---
 
 In the last post, we spoke about how it was a challenge to get data using the CLI, for programmatic use. It was a challenge, but the concept was not bad. After all, computers started off being commanded using the text interface. The CLI, though, got some job done, of course. There are more than a boatload of applications that can run purely from the command line. But there were challenges:
@@ -86,7 +99,7 @@ Apart from the proximity to the libraries, here's why PowerShell is awesome on W
 
 ### Remember less, use logic
 
-PowerShell sounds like English. When we need water, we say, "Could you please *get* me some *water*?" Notice the verb, the noun, and the sequence in which they're placed. If PowerShell ever got the capability of getting water, the command (or cmdlet---pronounce: command-let) would be, `Get-Water`. This way, we need to *remember less*. So if I want a list of processes running on my PC, I would just have to say, `Get-Process`. Can it get any simpler?
+PowerShell sounds like English. When we need water, we say, "Could you please *get* me some *water*?" Notice the verb, the noun, and the sequence in which they're placed. If PowerShell ever got the capability of getting water, the command (or cmdlet&mdash;pronounce: command-let) would be, `Get-Water`. This way, we need to *remember less*. So if I want a list of processes running on my PC, I would just have to say, `Get-Process`. Can it get any simpler?
 
 ### Systematic commands
 
@@ -116,9 +129,14 @@ Try it out! Experiment. Since the article is about 500 words, let's call it a da
 
 ---
 title: Sense, sensibility and flexibility
+date: '2017-04-05 12:00'
+tags:
+- windows
+- powershell
+category: tyro
 ---
 
-Yesterday, we saw how PowerShell addressed a few of the major issues the Windows CLI had. Today, we'll see how PowerShell is all about sense, sensibility and flexibility. I hope you've downloaded/upgraded your PowerShell. If not, this is the time to head over to Microsoft and download Windows PowerShell. The reason I'm asking for the upgrade is that some of the things I'm going to post in the future will depend on PowerShell 3.0. The link given is for version 5.0. If you feel that you may already be on a version higher than 3.0, then run the following command to ensure you are.
+Yesterday. The reason I'm asking for the upgrade is that some of the things I'm going to post in the future will depend on PowerShell 3.0. The link given is for version 5.0. If you feel that you may already be on a version higher than 3.0, then run the following command to ensure you are.
 
 ```powershell
 $PsVersionTable
@@ -168,6 +186,9 @@ Try out those commands. Get your hands dirty in PowerShell. There's something ca
 
 ---
 title: Familiarising the windows
+date: '2017-04-06 12:00'
+tags: powershell
+category: tyro
 ---
 
 We saw some cool stuff in the past couple of posts on PowerShell. Some of us probably even found it ironic that there were certain things in the commands given in the post, which did not make much sense, while everything in PowerShell *should* have made sense.
@@ -183,11 +204,11 @@ Back to using PowerShell. Technically speaking, if you're running a 64-bit (x64)
 * The Console
   * Windows PowerShell
   * Windows PowerShell (x86)
-  * The [administrator] window for both
+  * The administrator] window for both
 * The Integrated Scripting Environment (ISE)
   * Windows PowerShell ISE
   * Windows PowerShell ISE (x86)
-  * The [administrator] window for both
+  * The administrator] window for both
 
 Please note that on x86 computers, there would be no Windows PowerShell (x86) because their PowerShell would anyway be x86, eliminating the need for another x86-type window. x64 computers, on the other hand, have x64 windows by default, and can launch an x86 window if needed, although, I can't think of a practical reason to do it.
 
@@ -203,7 +224,7 @@ Don't worry about it. I'll remember to talk about this in the very next post, if
 
 ### The Integrated Scripting Environment
 
-The PowerShell ISE, as its name suggests, is a scripting-and-debugging environment. This is heavier compared to the PowerShell command console. The ISE is feature-rich, with Intellisense, command pane showing you all available commands, add-ons and things like that.
+The PowerShell ISE, as its name suggests, is a scripting-and-debugging environment. This is heavier compared to the PowerShell command console. The ISE is feature-rich, with Intellisense&trade;, command pane showing you all available commands, add-ons and things like that.
 
 The older versions of PowerShell ISE had three sections where action happened:
 
@@ -213,8 +234,8 @@ The older versions of PowerShell ISE had three sections where action happened:
 
 Today's PowerShell ISE combines the second and the third panes into one. So we have only the script pane and the console. Again, the console is used to run commands by hitting the `Enter` key, and viewing output. The scripting pane is to write PowerShell scripts. Here, hitting `Enter` just takes you to the next line. You have to run the script by hitting the `Run` key, and you can then break into the debugger to debug your scripts and all.
 
-As you can see, this is a more advanced way of using PowerShell---in fact, I'd daresay that this is *the* way to use PowerShell! But of course, if I just want to run `Restart-Computer`, I wouldn't launch a session of ISE. By the time it loads, the computer restart could begin, if done through the console.
+As you can see, this is a more advanced way of using PowerShell&mdash;in fact, I'd daresay that this is *the* way to use PowerShell! But of course, if I just want to run `Restart-Computer`, I wouldn't launch a session of ISE. By the time it loads, the computer restart could begin, if done through the console.
 
 > Did you know that you can convert a CMD window to a PowerShell command window? Open CMD, type in `PowerShell` and hit `Enter`. Notice the prompt change!
 
-That's all for today! Play around with the console and get used to how it looks and all. As a bonus, if you're into code highlight themes and all, check out this repository of PowerShell ISE themes. The instructions on how to use them is available in the README---just scroll down to below the list of files and folders. My personal favourite among these is VS2013_Dark. Enjoy!
+That's all for today! Play around with the console and get used to how it looks and all. As a bonus, if you're into code highlight themes and all, check out this repository of PowerShell ISE themes. Enjoy!
