@@ -1,10 +1,4 @@
----
-title: Command line, anybody?
-date: '2017-04-01 21:17'
-tags:
-- windows
-category: tyro
----
+# Command line, anybody?
 
 We're Windows people. We love the GUI. We don't use the boring plain window with grey text. All that is so yesterday, aye? We are more used to moving the mouse, clicking at places, and then touch the keyboard only when we have something to type. We love that experience, be it Aero&trade; effect, or some other sassy visuals. Command line, again, is so yesterday.
 
@@ -26,13 +20,7 @@ It's now time to download Windows PowerShell.
 
 It will ask you for a restart, so be prepared. Once it's done, you're all set to follow this blog. If you'd like to get updates very time a post is added, follow me on Facebook.
 
----
-title: Basics of Windows
-date: '2017-04-03 12:00'
-tags:
-- windows
-category: tyro
----
+# Basics of Windows
 
 Among all the jazz of ClearType fonts and graphics, we often take for granted what is actually some serious task&mdash;running the hardware of a computer. Ever wondered how different the actual working of a computer is, compared to what we see on the screen? In reality, it's overwhelmingly difficult to imagine how computers work, especially today. It's hard to believe that two voltage-based states of a bunch of transistors and gates are able to show to us what we see on the screen. These things finish off some tasks in seconds, that humans would usually take anywhere from a few minutes to several days to accomplish.
 
@@ -75,14 +63,7 @@ So there were problems with this approach, in that the output was not always usa
 
 The post is quite long for a read. Let's give ourselves a break here, and resume in the next post.
 
----
-title: Enter PowerShell
-date: '2017-04-04 12:00'
-tags:
-- windows
-- powershell
-category: tyro
----
+# Enter PowerShell
 
 In the last post, we spoke about how it was a challenge to get data using the CLI, for programmatic use. It was a challenge, but the concept was not bad. After all, computers started off being commanded using the text interface. The CLI, though, got some job done, of course. There are more than a boatload of applications that can run purely from the command line. But there were challenges:
 
@@ -127,14 +108,7 @@ Get-Command -Name 'Get-Date'
 
 Try it out! Experiment. Since the article is about 500 words, let's call it a day. We'll meet tomorrow to know more.
 
----
-title: Sense, sensibility and flexibility
-date: '2017-04-05 12:00'
-tags:
-- windows
-- powershell
-category: tyro
----
+# Sense, sensibility and flexibility
 
 Yesterday. The reason I'm asking for the upgrade is that some of the things I'm going to post in the future will depend on PowerShell 3.0. The link given is for version 5.0. If you feel that you may already be on a version higher than 3.0, then run the following command to ensure you are.
 
@@ -184,12 +158,7 @@ Get-Help Get-Service -Examples
 
 Try out those commands. Get your hands dirty in PowerShell. There's something called as muscle memory; it's what helps you type, without having to constantly look at the keyboard, also, how we type `Get-Help` instead of `Get Help`. Type the commands. Go on. Let's meet up again tomorrow!
 
----
-title: Familiarising the windows
-date: '2017-04-06 12:00'
-tags: powershell
-category: tyro
----
+# Familiarising the windows
 
 We saw some cool stuff in the past couple of posts on PowerShell. Some of us probably even found it ironic that there were certain things in the commands given in the post, which did not make much sense, while everything in PowerShell *should* have made sense.
 
@@ -239,3 +208,4 @@ As you can see, this is a more advanced way of using PowerShell&mdash;in fact, I
 > Did you know that you can convert a CMD window to a PowerShell command window? Open CMD, type in `PowerShell` and hit `Enter`. Notice the prompt change!
 
 That's all for today! Play around with the console and get used to how it looks and all. As a bonus, if you're into code highlight themes and all, check out this repository of PowerShell ISE themes. Enjoy!
+
