@@ -171,13 +171,10 @@ Before we wind up for the day, let's look at how getting help is no more juvenil
 ```powershell
 Get-Command -Verb 'Get' -Noun '*service*'
 
-# You would then try to find some help for that specific command:
 Get-Help Get-Service
 
-# Not very helpful? Need complete help documentation? No problem:
 Get-Help Get-Service -Full
 
-# Still not helpful? Would you like to see an example or two? Here:
 Get-Help Get-Service -Examples
 ```
 
