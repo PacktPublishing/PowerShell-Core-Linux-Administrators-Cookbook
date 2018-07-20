@@ -202,4 +202,3 @@ As you can see, this is a more advanced way of using PowerShell&mdash;in fact, I
 > Did you know that you can convert a CMD window to a PowerShell command window? Open CMD, type in `PowerShell` and hit `Enter`. Notice the prompt change!
 
 That's all for today! Play around with the console and get used to how it looks and all. As a bonus, if you're into code highlight themes and all, check out this repository of PowerShell ISE themes. Enjoy!
-
