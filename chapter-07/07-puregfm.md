@@ -19,7 +19,8 @@ My point is, the console is our friend. And friends, we embrace. Embrace the con
 It's now time to download Windows PowerShell.
 
 It will ask you for a restart, so be prepared. Once it's done, you're all set to follow this blog. If you'd like to get updates very time a post is added, follow me on Facebook.
-Basics of Windows
+
+# Basics of Windows
 
 Among all the jazz of ClearType fonts and graphics, we often take for granted what is actually some serious task&mdash;running the hardware of a computer. Ever wondered how different the actual working of a computer is, compared to what we see on the screen? In reality, it's overwhelmingly difficult to imagine how computers work, especially today. It's hard to believe that two voltage-based states of a bunch of transistors and gates are able to show to us what we see on the screen. These things finish off some tasks in seconds, that humans would usually take anywhere from a few minutes to several days to accomplish.
 
@@ -61,7 +62,8 @@ Now think of it as a game of Chinese Whispers. Funny, right?
 So there were problems with this approach, in that the output was not always usable for programming. The efficiency dropped significantly, and calling the classes within the internal framework was more than challenging.
 
 The post is quite long for a read. Let's give ourselves a break here, and resume in the next post.
-Enter PowerShell
+
+# Enter PowerShell
 
 In the last post, we spoke about how it was a challenge to get data using the CLI, for programmatic use. It was a challenge, but the concept was not bad. After all, computers started off being commanded using the text interface. The CLI, though, got some job done, of course. There are more than a boatload of applications that can run purely from the command line. But there were challenges:
 
@@ -105,7 +107,8 @@ Get-Command -Name 'Get-Date'
 ```
 
 Try it out! Experiment. Since the article is about 500 words, let's call it a day. We'll meet tomorrow to know more.
-Sense, sensibility and flexibility
+
+# Sense, sensibility and flexibility
 
 Yesterday. The reason I'm asking for the upgrade is that some of the things I'm going to post in the future will depend on PowerShell 3.0. The link given is for version 5.0. If you feel that you may already be on a version higher than 3.0, then run the following command to ensure you are.
 
