@@ -1,0 +1,10 @@
+<a href="mailto:{4}?subject=Payment due for {2}&body=Dear {0} {1},
+
+Hope you are doing well.
+
+This is to notify you that the payment of {6:c} for card number {2} has not been received as yet. We tried to call you at {5:00#-###-###-####}, but could not reach you. We have mailed the statement to the address: {3}.
+
+Please write to us in case you need any assistance, have queries, or would like any of the details corrected.
+
+Regards,
+Central Bank of Imaginary Realms">Send email</a>
