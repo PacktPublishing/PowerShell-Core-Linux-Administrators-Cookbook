@@ -19,6 +19,9 @@ function New-PersonalMessage {
     )
     
     if ($WavPath) {
-
+        New-VoiceCall -PhoneNumber $PhoneNumber -FilePath $WavPath
+    }
+    else {
+        Send-TextMessage -PhoneNumber $PhoneNumber -Message $Message
     }
 }
