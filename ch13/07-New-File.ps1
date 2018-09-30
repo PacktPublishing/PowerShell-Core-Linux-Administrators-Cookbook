@@ -1,24 +1,23 @@
 function New-File {
-    [CmdletBinding(SupportsShouldProcess=$true)]
+    [CmdletBinding(
+        SupportsShouldProcess=$true,
+        ConfirmImpact='High'
+    )]
     param (
         # The path to the file (or the name)
-        [Parameter(Mandatory=$true, Position=1, ValueFromPipeline=$true)]
-        [string]
+        [Parameter(Mandatory=$true, Position=0, ValueFromPipeline=$true)]
+        [string[]]
         $Path
     )
     begin {
         Write-Host "$(Get-Date)"
-        $commonParameters = @()
-
-        if ($WhatIfPreference) {
-            $commonParameters.Add('WhatIf', $true)
-        }
-        if ($ConfirmPreference) {
-            $commonParameters.Add('Confirm', $true)
-        }
     }
     process {
-        New-Item -Path $Path -ItemType File @commonParameters
+        foreach ($Item in $Path) {
+            if ($PSCmdlet.ShouldProcess("$PsScriptRoot", "Create $Path")) {
+                New-Item -Path $Path -ItemType File
+            }
+        }
     }
     end {}
 }
