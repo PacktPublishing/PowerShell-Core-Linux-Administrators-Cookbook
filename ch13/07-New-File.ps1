@@ -1,7 +1,7 @@
 function New-File {
     [CmdletBinding(
-        SupportsShouldProcess=$true,
-        ConfirmImpact='High'
+        ConfirmImpact='High',
+        SupportsShouldProcess=$true
     )]
     param (
         # The path to the file (or the name)
