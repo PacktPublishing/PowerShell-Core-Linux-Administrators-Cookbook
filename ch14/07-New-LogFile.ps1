@@ -3,7 +3,7 @@ function New-LogFile {
         # The path to the log file
         [Parameter(Mandatory=$false)]
         [string]
-        $Path = "$HOME/random",
+        $Path = "$HOME/random/LogDir",
 
         # The name of the log file
         [Parameter(Mandatory=$false)]
@@ -12,7 +12,7 @@ function New-LogFile {
     )
 
     try {
-        New-Item "$Path\$Name" -ItemType File -ErrorAction Stop
+        New-Item "$Path/$Name" -ItemType File -ErrorAction Stop
     }
     catch [System.IO.DirectoryNotFoundException] {
         New-Item $Path -ItemType Directory -Force
