@@ -23,8 +23,8 @@ function New-LogFile {
         New-LogFile
     }
     catch {
-        Write-Verbose "The code tag."
-        "Some error other than DirectoryNotFound"
+        Write-Verbose "Catch-all. There was an error."
+        Write-Error $_
     }
 }
-New-LogFile -Verbose 4>> verbose.log
+New-LogFile -Verbose 4>> verbose.log 2>> error.log
