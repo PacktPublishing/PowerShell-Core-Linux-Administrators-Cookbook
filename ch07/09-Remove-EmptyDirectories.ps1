@@ -5,7 +5,7 @@ do {
     $EmptyDirectories | Remove-Item
     $Count = $EmptyDirectories.Count
 
-    "Iteration $Iteration`nRemoved the following $Count directories. '$Count = 0' is $($Count -eq 0)"
+    Write-Output "Iteration $Iteration`nRemoved the following $Count directories. '$Count = 0' is $($Count -eq 0)"
     $EmptyDirectories
     $Iteration++
 } until ($Count -eq 0)

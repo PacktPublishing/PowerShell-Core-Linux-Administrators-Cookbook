@@ -4,7 +4,7 @@ do {
     $EmptyDirectories = $AllDirectories | Where-Object {(Get-ChildItem $PSItem).Count -eq 0}
     $EmptyDirectories | Remove-Item
 
-    "Iteration $Iteration. Removed the following $($EmptyDirectories.Count) directories."
+    Write-Output "Iteration $Iteration. Removed the following $($EmptyDirectories.Count) directories."
     $EmptyDirectories
     $Iteration++
 } while ($EmptyDirectories.Count -gt 0)
