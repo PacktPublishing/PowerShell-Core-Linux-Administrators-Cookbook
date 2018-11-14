@@ -1,9 +1,22 @@
-param ($TotalTime = 25)
+function Start-Count {
+    param (
+        # The current time, or the starting point
+        [Parameter(Mandatory=$false)]
+        [Alias("CT", "From")]
+        [int]
+        $CurrentTime=0,
 
-$CurrentTime = 0
+        # The total number of seconds to count
+        [Parameter(Mandatory=$false, Position=1)]
+        [Alias("TT", "To")]
+        [ValidateSet(5, 10, 15, 20)]
+        [int]
+        $TotalTime=10
+    )
 
-while ($CurrentTime -le $TotalTime) {
-    Write-Progress -Activity "Counting to $TotalTime" -Status "Elapsed time: $CurrentTime seconds" -PercentComplete ($CurrentTime / $TotalTime * 100)
-    Start-Sleep 1
-    $CurrentTime++
+    while ($CurrentTime -le $TotalTime) {
+        Write-Progress -Activity "Counting to $TotalTime" -Status "Counting: $CurrentTime seconds" -PercentComplete ($CurrentTime / $TotalTime * 100)
+        Start-Sleep 1
+        $CurrentTime++
+    }
 }
