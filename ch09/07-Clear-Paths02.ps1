@@ -1,5 +1,5 @@
 $PathsToDelete = New-Object -TypeName System.Collections.ArrayList
-foreach ($Path in Get-ChildItem $HOME/random -Recurse) {
+foreach ($Path in (Get-ChildItem $HOME/random -Recurse)) {
     [void]$PathsToDelete.Add($Path.FullName)
 }
 
