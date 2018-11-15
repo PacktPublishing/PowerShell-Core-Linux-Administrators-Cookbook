@@ -1,138 +1,169 @@
-# Introducing the Core and its Capabilities
+# Preparing for Administration using PowerShell
 
-Get information on a certain directory:
+Install Visual Studio Code from the repository (Ubuntu):
 
-```powershell
-# Using the .NET class
-New-Object -TypeName System.IO.DirectoryInfo -ArgumentList '/home/ram'
-
-# Using PowerShell
-Get-Item '/home/ram'
+```bash
+sudo apt install code
 ```
 
-Get the members that are part of the returned object:
+To install Visual Studio Code using the `deb` package:
 
-```powershell
-Get-Item '/home/ram' | Get-Member
+```bash
+sudo apt install install code_version_arch.deb
 ```
 
-Get one of the members from the output:
+List the variables in a new terminal session:
 
 ```powershell
-# Find the time the directory was written to, last
-(Get-Item /home/ram).LastWriteTime
+# When using a cmdlet
+Get-Variable
 
-# Find the parent of the directory
-(Get-Item /home/ram).Parent
-
-# Find the time the parent was created
-(Get-Item /home/ram).Parent.CreationTime
-
-# Pick just the year property
-(Get-Item /home/ram).Parent.CreationTime.Year
+# When using a PowerShell provider
+Set-Location Variable:
+Get-ChildItem .
 ```
 
-Create a subdirectory within a directory using one of the methods available in the output object:
+To silence error output in case of errors:
 
 ```powershell
-(Get-Item /home/ram).CreateSubdirectory('test-directory')
+Set-Variable ErrorActionPreference SilentlyContinue
 ```
 
-Use a .NET type accelerator to convert text to an object:
+Working with a PowerShell profile:
 
 ```powershell
-[datetime]'21 June 2018'
+# Create the new profile
+New-Item $PROFILE -ItemType File -Force
 
-# Verify if the text was indeed converted into an object
-[DateTime]'21 June 2018' | Get-Member
+# Edit the new profile in Visual Studio Code
+code $PROFILE
+
+# Delete the profile
+Remove-Item $PROFILE
 ```
 
-Use PowerShell to convert the same string into a date object:
+Sample long-running line of PowerShell code, broken for readability:
 
 ```powershell
-Get-Date '21 June 2018'
-
-# Pick just the Year property to verify the output is indeed an object
-(Get-Date '21 June 2018').Year
+Get-ChildItem /home/$env:USERNAME/Downloads |
+Where-Object {$_.LastWriteTime.Year -eq 2018} | Select-Object `
+Name, LastWriteTime
 ```
 
-Convert text in the form of comma-separated values, to a PowerShell custom object:
+Send command output to a file:
 
 ```powershell
-# Create a file from text
+# The Linux way (which works on PowerShell)
+Get-Process > processes.txt
+
+# The PowerShell way
+Get-Process | Out-File processes.txt
+```
+
+Append output to a file:
+
+```powershell
+# The Linux way (which works in PowerShell)
+Get-Process >> processes.txt
+
+#  The PowerShell way
+Get-Process | Out-File processes.txt -Append
+```
+
+To display the output on the terminal emulator as well as send it to a file:
+
+```powershell
+# Only the PowerShell way
+Get-Process | Tee-Object ./processes.txt
+```
+
+Reading content from a file:
+
+```bash
+# The Linux way (which DOES NOT work on PowerShell)
+command < input.txt
+```
+
+```powershell
+# The PowerShell way
+Get-Content input.txt | Remove-Item -WhatIf
+```
+
+Create new files/directories:
+
+```powershell
+# Create a new directory
+New-Item -Path test-dir -ItemType Directory
+
+# Create a complete path instead (directory inside a directory)
+New-Item test-dir/child-dir -ItemType Directory -Force
+
+# Create multiple files
+New-Item ./test-dir/file1, ./test-dir/file2, ./test-dir/child-dir/file3
+```
+
+Find parameter aliases:
+
+```PowerShell
+(Get-Command Invoke-Command).Parameters.Values | select Name, Aliases
+```
+
+Call PowerShell scripts from outside of PowerShell
+
+```PowerShell
+# When the path to the script does not contain spaces
+/path/to/the-script.ps1
+
+# When the path to the script file contains a space
+& '/path/to/directory with spaces/script.ps1'
+
+# When we want the variables, aliases and functions retained in the session
+. /path/to/the-script.ps1
+
+# If there are spaces in the path, enclose it in quotes
+. '/path/to/directory with spaces/script.ps1'
+```
+
+Call a PowerShell cmdlet from outside of PowerShell
+
+```bash
+# When calling a cmdlet
+pwsh -c Get-ChildItem
+
+# When calling a script
+pwsh -f ./Documents/code/github/powershell/chapter-3/hello-world.ps1
+```
+
+Record actions performed at the PowerShell console
+
+```powershell
+# Start the recording
+Start-Transcript -Path ./command-transcript.txt
+
+# Perform actions on the terminal
+Get-Date
+
+Get-ChildItem .
+
+New-Item test-transcript -ItemType Directory
+
+New-Item -Path test-transcript/testing-transcript.txt -ItemType File
+
+# Add contents to the newly-created file
 @'
-WS,CPU,Id,SI,ProcessName
-161226752,23.42,1914,1566,io.elementary.a
-199598080,77.84,1050,1040,gnome-shell
-216113152,0.67,19250,1566,atom
-474685440,619.05,1568,1566,Xorg
-1387864064,1890.29,15720,1566,firefox
-'@ | Out-File sample.csv
+In publishing and graphic design, lorem ipsum is a placeholder text
+commonly used to demonstrate the visual form of a document without relying
+on meaningful content (also called greeking).
+Replacing the actual content with placeholder text allows designers to
+design the form of the content before the content itself has been produced.
+—Wikipedia
+'@ | Out-File ./test-transcript/testing-transcript.txt -Append
 
-# Read the contents of the CSV file
-Get-Content ./sample.csv
+Remove-Item -Path ./test-transcript -Recurse
 
-# Import the file into PowerShell instead of just reading the content
-Import-Csv ./sample.csv
-```
+# Stop the recording
+Stop-Transcript
 
-Compare output of Bash and PowerShell; work with files within a directory:
-
-```powershell
-# Use Linux commandline tools
-ls -l | awk '{print $6, $7, $8, $9}'
-
-# Identify the output object type
-ls -l | awk '{print $6, $7, $8, $9}' | Get-Member
-
-# Use PowerShell
-Get-ChildItem | select LastWriteTime, Name
-
-# Identify the output object type
-Get-ChildItem | select LastWriteTime, Name | Get-Member
-```
-
-Work with aliases in PowerShell:
-
-```powershell
-# List out all the available aliases
-Get-Alias
-
-# Get information on a specific alias
-Get-Alias gbp
-
-# Find all aliases for a certain cmdlet
-Get-Alias -Definition Get-ChildItem
-```
-
-Create a custom alias:
-
-```powershell
-New-Alias listdir Get-ChildItem
-```
-
-Export aliases to a file for future use:
-
-```powershell
-# As a CSV file to use with Import-Alias
-Export-Alias aliases.csv
-
-# As a script, if you do not want to use CSV
-Export-Alias aliases.ps1 -As Script
-```
-
-Working with execution policies (Windows only for now):
-
-```powershell
-# Find the execution policy in effect
-Get-ExecutionPolicy
-
-# List out all the execution policies set at different levels
-Get-ExecutionPolicy -List
-
-# Set an execution policy at the machine level
-Set-ExecutionPolicy Undefined -Scope LocalMachine
-
-# Set an execution policy at the user level
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+# Read the contents of the recording
+Get-Content -Path ./command-transcript.txt
 ```

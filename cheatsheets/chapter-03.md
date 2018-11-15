@@ -1,169 +1,164 @@
-# Preparing for Administration using PowerShell
+# First steps to administration using PowerShell
 
-Install Visual Studio Code from the repository (Ubuntu):
+## Working with date and time
 
-```bash
-sudo apt install code
-```
-
-To install Visual Studio Code using the `deb` package:
-
-```bash
-sudo apt install install code_version_arch.deb
-```
-
-List the variables in a new terminal session:
-
-```powershell
-# When using a cmdlet
-Get-Variable
-
-# When using a PowerShell provider
-Set-Location Variable:
-Get-ChildItem .
-```
-
-To silence error output in case of errors:
-
-```powershell
-Set-Variable ErrorActionPreference SilentlyContinue
-```
-
-Working with a PowerShell profile:
-
-```powershell
-# Create the new profile
-New-Item $PROFILE -ItemType File -Force
-
-# Edit the new profile in Visual Studio Code
-code $PROFILE
-
-# Delete the profile
-Remove-Item $PROFILE
-```
-
-Sample long-running line of PowerShell code, broken for readability:
-
-```powershell
-Get-ChildItem /home/$env:USERNAME/Downloads |
-Where-Object {$_.LastWriteTime.Year -eq 2018} | Select-Object `
-Name, LastWriteTime
-```
-
-Send command output to a file:
-
-```powershell
-# The Linux way (which works on PowerShell)
-Get-Process > processes.txt
-
-# The PowerShell way
-Get-Process | Out-File processes.txt
-```
-
-Append output to a file:
-
-```powershell
-# The Linux way (which works in PowerShell)
-Get-Process >> processes.txt
-
-#  The PowerShell way
-Get-Process | Out-File processes.txt -Append
-```
-
-To display the output on the terminal emulator as well as send it to a file:
-
-```powershell
-# Only the PowerShell way
-Get-Process | Tee-Object ./processes.txt
-```
-
-Reading content from a file:
-
-```bash
-# The Linux way (which DOES NOT work on PowerShell)
-command < input.txt
-```
-
-```powershell
-# The PowerShell way
-Get-Content input.txt | Remove-Item -WhatIf
-```
-
-Create new files/directories:
-
-```powershell
-# Create a new directory
-New-Item -Path test-dir -ItemType Directory
-
-# Create a complete path instead (directory inside a directory)
-New-Item test-dir/child-dir -ItemType Directory -Force
-
-# Create multiple files
-New-Item ./test-dir/file1, ./test-dir/file2, ./test-dir/child-dir/file3
-```
-
-Find parameter aliases:
+Custom formatting dates:
 
 ```PowerShell
-(Get-Command Invoke-Command).Parameters.Values | select Name, Aliases
+$Date = Get-Date
+"$($Date.Day)/$($Date.Month)/$($Date.Year)"
 ```
 
-Call PowerShell scripts from outside of PowerShell
+Pre-formatted dates (some examples):
 
 ```PowerShell
-# When the path to the script does not contain spaces
-/path/to/the-script.ps1
-
-# When the path to the script file contains a space
-& '/path/to/directory with spaces/script.ps1'
-
-# When we want the variables, aliases and functions retained in the session
-. /path/to/the-script.ps1
-
-# If there are spaces in the path, enclose it in quotes
-. '/path/to/directory with spaces/script.ps1'
+Get-Date -Format d
+Get-Date -Format g
+Get-Date -Format U
+Get-Date -Format yyyy/MM/dd
+Get-Date -Format yyyyMMddhhmmss
 ```
 
-Call a PowerShell cmdlet from outside of PowerShell
+UNIX-like date formatting:
 
-```bash
-# When calling a cmdlet
-pwsh -c Get-ChildItem
-
-# When calling a script
-pwsh -f ./Documents/code/github/powershell/chapter-3/hello-world.ps1
+```PowerShell
+Get-Date -Uformat %d/%m/%Y
 ```
 
-Record actions performed at the PowerShell console
+Find what day of week a certain date is:
 
-```powershell
-# Start the recording
-Start-Transcript -Path ./command-transcript.txt
+```PowerShell
+# Avoiding all confusion
+(Get-Date -Day 31 -Month 10 -Year 2018).DayOfWeek
 
-# Perform actions on the terminal
-Get-Date
+# If your locale is the only context your scripts would run in
+(Get-Date 31/10/2018).DayOfWeek
 
-Get-ChildItem .
+# Using a type accelerator
+([datetime]'10/31/2018').DayOfWeek
 
-New-Item test-transcript -ItemType Directory
+# Using a type accelerator, avoiding ambiguity
+([datetime]'31 October 2018').DayOfWeek
+```
 
-New-Item -Path test-transcript/testing-transcript.txt -ItemType File
+Convert time into UTC:
 
-# Add contents to the newly-created file
-@'
-In publishing and graphic design, lorem ipsum is a placeholder text
-commonly used to demonstrate the visual form of a document without relying
-on meaningful content (also called greeking).
-Replacing the actual content with placeholder text allows designers to
-design the form of the content before the content itself has been produced.
-—Wikipedia
-'@ | Out-File ./test-transcript/testing-transcript.txt -Append
+```PowerShell
+(Get-Date).ToUniversalTime()
+```
 
-Remove-Item -Path ./test-transcript -Recurse
+Calculating time:
 
-# Stop the recording
-Stop-Transcript
+```PowerShell
+# Add days to the current date
+(Get-Date).AddDays(35)
 
-# Read the contents of the recording
-Get-Content -Path ./command-transcript.txt
+# Subtract days from the current date
+(Get-Date).AddDays(-21)
+
+# Add hours and minutes
+(Get-Date).AddHours(3).AddMinutes(18)
+
+# Time between two dates
+(Get-Date).Subtract((Get-Date '5 June 2016'))
+```
+
+## Working with processes
+
+Working with currently running processes:
+
+```PowerShell
+# Listing out the processes
+Get-Process
+
+# Counting the processes
+(Get-Process).Count
+```
+
+Getting the average of memory pages used:
+
+```PowerShell
+Get-Process | Measure-Object -Property WS -Average
+```
+
+Getting more working set information:
+
+```PowerShell
+Get-Process | Measure-Object -Property WS -Average -Sum -Minimum -
+Maximum
+```
+
+Getting more than one such properties from the process table:
+
+```PowerShell
+Get-Process | Measure-Object -Property WS, CPU -Average -Sum -Minimum -
+Maximum
+```
+
+Getting the owner of processes:
+
+```PowerShell
+Get-Process -IncludeUserName
+```
+
+Listing the processes owned by you:
+
+```PowerShell
+# Listing the processes
+Get-Process -IncludeUserName | grep $env:USERNAME
+
+# Counting the processes
+(Get-Process -IncludeUserName | grep $env:USERNAME).Count
+
+# Alternatively,
+Get-Process -IncludeUserName | grep $env:USERNAME | Measure-Object
+```
+
+Bonus: Measuring the working set consumed by the processes owned by you (combination of PowerShell and Linux commands):
+
+```PowerShell
+Get-Process -IncludeUserName | grep ram | awk '{print $1}' | ForEachObject
+{[Double]$_} | Measure-Object -Sum
+```
+
+## Scheduling jobs
+
+Creating a job that runs every fifteen minutes:
+
+```PowerShell
+# Explicit configuration
+New-CronJob -Command 'pwsh -f "/tmp/DataLoading.PS1;"' -Minute
+0,15,30,45 | Out-Host
+
+# Using interval notation
+New-CronJob -Command 'pwsh -f "/tmp/DataLoading.PS1;"' -Minute */15 |
+Out-Host
+
+# Specifying a time range
+New-CronJob -Command 'pwsh -f "/tmp/DataLoading.PS1;"' -Minute */15 -Hour 10-12 | Out-Host
+
+# With days of week and months of the year
+New-CronJob -Command 'pwsh -f "/tmp/DataLoading.PS1;"' -Minute */15 -
+Hour 10-12 -DayOfWeek sun, tue, fri -Month Jan, Mar, Jun, Sep, Dec | Out-Host
+```
+
+Listing out scheduled jobs:
+
+```PowerShell
+Get-CronJob
+
+# If you want better formatting:
+Get-CronJob | Format-Table -Autosize
+```
+
+Get the contents of the `crontab` file:
+
+```PowerShell
+Get-CronTab
+```
+
+Removing jobs:
+
+```PowerShell
+Get-CronJob | Where-Object {$_.Month -match 'Jan'} | Remove-CronJob
 ```

@@ -1,132 +1,154 @@
-# Passing Data through the Pipeline
+# Using Variables and Objects
 
-Clone the [repository from GitHub](https://github.com/PacktPublishing/PowerShell-6.0-Linux-Administration-Cookbook) or download the [lab setup script](https://github.com/PacktPublishing/PowerShell-6.0-Linux-Administration-Cookbook/blob/master/chapter-05/Initialize-PacktPs6CoreLinuxLab.ps1) from the repository.
-
-Run the script to create the files for the lab.
+Save an entire object into a variable:
 
 ```powershell
-& ~/Downloads/Initialize-PacktPs6CoreLinuxLab.ps1
+$Process = Get-Process
 ```
 
-List out the contents of a directory:
+Work with environment variables:
 
 ```powershell
-Get-ChildItem -Path .
+# List out all the environment variables
+Get-ChildItem env:
+
+# Get information on a specific variable
+Get-ChildItem Env:/PATH
 ```
 
-Omit the `Mode` column from the output:
+Quickly create a custom object:
 
 ```powershell
-Get-ChildItem -Path . | Select-Object LastWriteTime, Length, Name
+$MyCustomObject = [pscustomobject]@{ 
+    Name = 'Prashanth Jayaram'
+    Title = 'PowerShell'
+    Publisher = 'Packt' 
+}
 ```
 
-Change the name of a column:
+Add a member to an existing object:
 
 ```powershell
-Get-ChildItem -Path . | Select-Object Name, Length, @{Name='Modified'; Expression={$_.LastWriteTime}}
+$MyCustomObject | Add-Member -MemberType NoteProperty -Name 'Location' -Value 'United States'
 ```
 
-Pick only the year of modification using thecalculated property notation:
+Access a single property from the object:
 
 ```powershell
-Get-ChildItem -Path . | select Name, Length, @{Name='DaysSinceModification'; Expression={[math]::Round(((Get-Date) - $_.LastWriteTime).TotalDays)}}
+$MyCustomObject.Name
 ```
 
-Pick a certain number of ourput items:
+Remove a member from an object:
 
 ```powershell
-# First five items
-Get-ChildItem . | Select-Object -First 5
-
-# Last five items
-Get-ChildItem . | Select-Object -Last 5
-
-# Skip the first three items
-Get-ChildItem . | Select-Object -Skip 3
-
-# Pick the fourth item from the output
-Get-ChildItem . | Select-Object -Index 3
+$MyCustomObject.PsObject.Properties.Remove('Location')
 ```
 
-Expand the elements within a property:
+Create a custom object from an output object:
 
 ```powershell
-# The pwsh process
-Get-Process pwsh | Select-Object -ExpandProperty Threads
+# Assign an object to a variable
+$Process = (Get-Process | Select-Object Name, Id, WS, StartTime)[4]
 
-# Select specific properties from within the property
-Get-Process pwsh | Select-Object -ExpandProperty Threads | Select-Object -Property Id, PriorityLevel, StartTime
+# Create a new object
+$CustomProcess = New-Object -TypeName PSObject -Property @{
+    ProcessName = $Process.Name
+    ProcessId = $Process.Id
+    WorkingSet = $Process.WS
+    StartedAt = $Process.StartTime
+}
+
+# To have the object properties in a certain sequence
+$CustomProcess = [ordered]@{
+    ProcessName = $Process.Name
+    ProcessId = $Process.Id
+    WorkingSet = $Process.WS
+    StartedAt = $Process.StartTime
+} 
+New-Object -TypeName PSObject -Property $CustomProcess
+
+# Modify the properties and their values to suit your needs
+$CustomProcess = [ordered]@{
+    ProcessName = $Process.Name
+    ProcessId = $Process.Id
+    WorkingSet = $Process.WS
+    RunningMins = [math]::Floor(((Get-Date) - $Process.StartTime).TotalMinutes)
+}
+New-Object -TypeName PsObject -Property $CustomProcess
 ```
 
-Filter out files that are over 0 bytes in size:
+Add members to objects without recreating the entire object:
 
 ```powershell
-Get-ChildItem -Path . | Where-Object -Property Length -GT -Value 0
+# Get the base object
+$FilesWithAge = Get-ChildItem . | Select-Object Name, Length, LastWriteTime
+
+# Add a member to the object
+$FilesWithAge | Add-Member -MemberType ScriptProperty -Name Age -Value { [math]::Round(((Get-Date) - $this.LastWriteTime).TotalDays) }
 ```
 
-Filter based on two (or more) properties:
+Update the type data using cmdlets:
 
 ```powershell
-# Pick all the JPG files larger than 0 bytes
-Get-ChildItem -Path . | Where-Object -FilterScript {$_.Length -GT 0 -and $_.Extension -EQ '.jpg'}
-
-# Pick files as above, whose names start with c
-Get-ChildItem -Path . | Where-Object -FilterScript {$_.Length -GT 0 -and $_.Extension -EQ '.jpg' -and $_.Name -CMatch '^c'}
+Update-TypeData -TypeName System.IO.FileInfo -MemberType ScriptProperty -MemberName Age -Value { [math]::Round(((Get-Date) - $this.LastWriteTime).TotalDays) }
 ```
 
-Group output based on a property:
+Basic structure of the XML used to extend the type data:
 
-```powershell
-Get-ChildItem . -File | Group-Object Extension
-
-# Do the same, but do not show the file names
-Get-ChildItem -Path . -File | Group-Object -Property Extension -NoElement
-
-# Show only the JPG files from the lot
-Get-ChildItem -Path . -File | Group-Object -Property Extension | Where-Object Name -EQ .jpg | Select-Object -ExpandProperty Group
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+ <Type>
+   <Name></Name>
+   <Members>
+     <AliasProperty>
+       <Name></Name>
+       <ReferencedMemberName></ReferencedMemberName>
+     </AliasProperty>
+   </Members>
+ </Type>
+</Types>
 ```
 
-Sort the output based on a property:
+Break down the XML to understand the different kinds of properties:
 
-```powershell
-Get-ChildItem -Path . -File | Sort-Object -Property Length
+```xml
+<!-- An alias property -->
+<AliasProperty>
+    <Name>Modified</Name>
+    <ReferencedMemberName>LastWriteTime</ReferencedMemberName>
+</AliasProperty>
 
-# Sort in the descending order
-Get-ChildItem -Path . -File | Sort-Object -Property Length -Descending
+<!-- A script property -->
+<ScriptProperty>
+    <Name>Age</Name>
+    <GetScriptBlock>
+        [math]::Round(((Get-Date) - $this.LastWriteTime).TotalDays)
+    </GetScriptBlock>
+</ScriptProperty>
 
-# Pick the largest three files in the lot
-Get-ChildItem -Path . -File | Sort-Object -Property Length -Descending -Top 3
+<!-- A note property -->
+<NoteProperty>
+    <Name>ItemType</Name>
+    <Value>File</Value>
+</NoteProperty>
 ```
 
-(Dummy-)delete top two largest files of each type from a directory (if there is only one file of each type, that would be left alone):
+Extend the type data using an XML file:
 
 ```powershell
-Get-ChildItem -Path . -File | 
-Group-Object -Property Extension | 
-Where-Object Count -GT 1 | 
-ForEach-Object {$_.Group | 
-Sort-Object Length -Bottom 2} | 
-Remove-Item -WhatIf
+Update-TypeData -PrependPath '~/Documents/code/github/powershell/chapter-06/CustomTypes.ps1xml'
 ```
 
-The long way to get directory contents, which demonstrates accepting values through the pipeline, `ByPropertyName`:
+Remove custom type data:
 
 ```powershell
-Get-Item . | Select-Object @{Name = 'LiteralPath'; Expression = {$_.FullName}} | Get-ChildItem
-```
+# Start with the command that gives you the object whose type data you extended
+$TypeData = Get-ChildItem -File | Get-Member | Select-Object -ExpandProperty TypeName -Unique
 
-Import content into PowerShell and work with the object:
+# Ensure there has been a type data extension; notice the members
+Get-TypeData -TypeName $TypeData | Select-Object -ExpandProperty Members
 
-```powershell
-# First export the content so we have some real data
-Get-ChildItem -Path . | Select-Object Name, FullName, CreationTime, LastWriteTime, Extension, Length | Export-Csv ./file-list.csv
-
-# Import the content and get the year when the files were created; what type of object is it?
-(Import-Csv ./file-list.csv).CreationTime.Year | Get-Member
-
-# Export the content with the object type intact
-Get-ChildItem -Path . | Export-Clixml ./file-list.xml
-
-# Import the content and get the year when the files were created; what type of object is it?
-(Import-Clixml ./file-list.xml).CreationTime.Year | Get-Member
+# Remove the custom type data
+Remove-TypeData -TypeName $TypeData
 ```

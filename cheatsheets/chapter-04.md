@@ -1,164 +1,132 @@
-# First steps to administration using PowerShell
+# Passing Data through the Pipeline
 
-## Working with date and time
+Clone the [repository from GitHub](https://github.com/PacktPublishing/PowerShell-6.0-Linux-Administration-Cookbook) or download the [lab setup script](https://github.com/PacktPublishing/PowerShell-6.0-Linux-Administration-Cookbook/blob/master/chapter-05/Initialize-PacktPs6CoreLinuxLab.ps1) from the repository.
 
-Custom formatting dates:
+Run the script to create the files for the lab.
 
-```PowerShell
-$Date = Get-Date
-"$($Date.Day)/$($Date.Month)/$($Date.Year)"
+```powershell
+& ~/Downloads/Initialize-PacktPs6CoreLinuxLab.ps1
 ```
 
-Pre-formatted dates (some examples):
+List out the contents of a directory:
 
-```PowerShell
-Get-Date -Format d
-Get-Date -Format g
-Get-Date -Format U
-Get-Date -Format yyyy/MM/dd
-Get-Date -Format yyyyMMddhhmmss
+```powershell
+Get-ChildItem -Path .
 ```
 
-UNIX-like date formatting:
+Omit the `Mode` column from the output:
 
-```PowerShell
-Get-Date -Uformat %d/%m/%Y
+```powershell
+Get-ChildItem -Path . | Select-Object LastWriteTime, Length, Name
 ```
 
-Find what day of week a certain date is:
+Change the name of a column:
 
-```PowerShell
-# Avoiding all confusion
-(Get-Date -Day 31 -Month 10 -Year 2018).DayOfWeek
-
-# If your locale is the only context your scripts would run in
-(Get-Date 31/10/2018).DayOfWeek
-
-# Using a type accelerator
-([datetime]'10/31/2018').DayOfWeek
-
-# Using a type accelerator, avoiding ambiguity
-([datetime]'31 October 2018').DayOfWeek
+```powershell
+Get-ChildItem -Path . | Select-Object Name, Length, @{Name='Modified'; Expression={$_.LastWriteTime}}
 ```
 
-Convert time into UTC:
+Pick only the year of modification using thecalculated property notation:
 
-```PowerShell
-(Get-Date).ToUniversalTime()
+```powershell
+Get-ChildItem -Path . | select Name, Length, @{Name='DaysSinceModification'; Expression={[math]::Round(((Get-Date) - $_.LastWriteTime).TotalDays)}}
 ```
 
-Calculating time:
+Pick a certain number of ourput items:
 
-```PowerShell
-# Add days to the current date
-(Get-Date).AddDays(35)
+```powershell
+# First five items
+Get-ChildItem . | Select-Object -First 5
 
-# Subtract days from the current date
-(Get-Date).AddDays(-21)
+# Last five items
+Get-ChildItem . | Select-Object -Last 5
 
-# Add hours and minutes
-(Get-Date).AddHours(3).AddMinutes(18)
+# Skip the first three items
+Get-ChildItem . | Select-Object -Skip 3
 
-# Time between two dates
-(Get-Date).Subtract((Get-Date '5 June 2016'))
+# Pick the fourth item from the output
+Get-ChildItem . | Select-Object -Index 3
 ```
 
-## Working with processes
+Expand the elements within a property:
 
-Working with currently running processes:
+```powershell
+# The pwsh process
+Get-Process pwsh | Select-Object -ExpandProperty Threads
 
-```PowerShell
-# Listing out the processes
-Get-Process
-
-# Counting the processes
-(Get-Process).Count
+# Select specific properties from within the property
+Get-Process pwsh | Select-Object -ExpandProperty Threads | Select-Object -Property Id, PriorityLevel, StartTime
 ```
 
-Getting the average of memory pages used:
+Filter out files that are over 0 bytes in size:
 
-```PowerShell
-Get-Process | Measure-Object -Property WS -Average
+```powershell
+Get-ChildItem -Path . | Where-Object -Property Length -GT -Value 0
 ```
 
-Getting more working set information:
+Filter based on two (or more) properties:
 
-```PowerShell
-Get-Process | Measure-Object -Property WS -Average -Sum -Minimum -
-Maximum
+```powershell
+# Pick all the JPG files larger than 0 bytes
+Get-ChildItem -Path . | Where-Object -FilterScript {$_.Length -GT 0 -and $_.Extension -EQ '.jpg'}
+
+# Pick files as above, whose names start with c
+Get-ChildItem -Path . | Where-Object -FilterScript {$_.Length -GT 0 -and $_.Extension -EQ '.jpg' -and $_.Name -CMatch '^c'}
 ```
 
-Getting more than one such properties from the process table:
+Group output based on a property:
 
-```PowerShell
-Get-Process | Measure-Object -Property WS, CPU -Average -Sum -Minimum -
-Maximum
+```powershell
+Get-ChildItem . -File | Group-Object Extension
+
+# Do the same, but do not show the file names
+Get-ChildItem -Path . -File | Group-Object -Property Extension -NoElement
+
+# Show only the JPG files from the lot
+Get-ChildItem -Path . -File | Group-Object -Property Extension | Where-Object Name -EQ .jpg | Select-Object -ExpandProperty Group
 ```
 
-Getting the owner of processes:
+Sort the output based on a property:
 
-```PowerShell
-Get-Process -IncludeUserName
+```powershell
+Get-ChildItem -Path . -File | Sort-Object -Property Length
+
+# Sort in the descending order
+Get-ChildItem -Path . -File | Sort-Object -Property Length -Descending
+
+# Pick the largest three files in the lot
+Get-ChildItem -Path . -File | Sort-Object -Property Length -Descending -Top 3
 ```
 
-Listing the processes owned by you:
+(Dummy-)delete top two largest files of each type from a directory (if there is only one file of each type, that would be left alone):
 
-```PowerShell
-# Listing the processes
-Get-Process -IncludeUserName | grep $env:USERNAME
-
-# Counting the processes
-(Get-Process -IncludeUserName | grep $env:USERNAME).Count
-
-# Alternatively,
-Get-Process -IncludeUserName | grep $env:USERNAME | Measure-Object
+```powershell
+Get-ChildItem -Path . -File | 
+Group-Object -Property Extension | 
+Where-Object Count -GT 1 | 
+ForEach-Object {$_.Group | 
+Sort-Object Length -Bottom 2} | 
+Remove-Item -WhatIf
 ```
 
-Bonus: Measuring the working set consumed by the processes owned by you (combination of PowerShell and Linux commands):
+The long way to get directory contents, which demonstrates accepting values through the pipeline, `ByPropertyName`:
 
-```PowerShell
-Get-Process -IncludeUserName | grep ram | awk '{print $1}' | ForEachObject
-{[Double]$_} | Measure-Object -Sum
+```powershell
+Get-Item . | Select-Object @{Name = 'LiteralPath'; Expression = {$_.FullName}} | Get-ChildItem
 ```
 
-## Scheduling jobs
+Import content into PowerShell and work with the object:
 
-Creating a job that runs every fifteen minutes:
+```powershell
+# First export the content so we have some real data
+Get-ChildItem -Path . | Select-Object Name, FullName, CreationTime, LastWriteTime, Extension, Length | Export-Csv ./file-list.csv
 
-```PowerShell
-# Explicit configuration
-New-CronJob -Command 'pwsh -f "/tmp/DataLoading.PS1;"' -Minute
-0,15,30,45 | Out-Host
+# Import the content and get the year when the files were created; what type of object is it?
+(Import-Csv ./file-list.csv).CreationTime.Year | Get-Member
 
-# Using interval notation
-New-CronJob -Command 'pwsh -f "/tmp/DataLoading.PS1;"' -Minute */15 |
-Out-Host
+# Export the content with the object type intact
+Get-ChildItem -Path . | Export-Clixml ./file-list.xml
 
-# Specifying a time range
-New-CronJob -Command 'pwsh -f "/tmp/DataLoading.PS1;"' -Minute */15 -Hour 10-12 | Out-Host
-
-# With days of week and months of the year
-New-CronJob -Command 'pwsh -f "/tmp/DataLoading.PS1;"' -Minute */15 -
-Hour 10-12 -DayOfWeek sun, tue, fri -Month Jan, Mar, Jun, Sep, Dec | Out-Host
-```
-
-Listing out scheduled jobs:
-
-```PowerShell
-Get-CronJob
-
-# If you want better formatting:
-Get-CronJob | Format-Table -Autosize
-```
-
-Get the contents of the `crontab` file:
-
-```PowerShell
-Get-CronTab
-```
-
-Removing jobs:
-
-```PowerShell
-Get-CronJob | Where-Object {$_.Month -match 'Jan'} | Remove-CronJob
+# Import the content and get the year when the files were created; what type of object is it?
+(Import-Clixml ./file-list.xml).CreationTime.Year | Get-Member
 ```
