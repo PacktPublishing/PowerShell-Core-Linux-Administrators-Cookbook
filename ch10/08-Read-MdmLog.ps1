@@ -7,6 +7,15 @@ foreach ($Line in $AllLogLines) {
     $Line = $Line -replace ".+(DeviceActionEvent)\ \{", '{'
     $Line = $Line -replace '\]$'
 
+    <# Alternatively:
+    $Line = $Line | Select-String -Pattern '(\{.*})' |
+        ForEach-Object {
+            $PSItem.Matches | ForEach-Object {
+                $PSItem.Value
+            }
+        }
+    #>
+
     $JsonData = ConvertFrom-Json $Line
     $UserInfo = $JsonData.userDeviceInfo.userInfo
 
