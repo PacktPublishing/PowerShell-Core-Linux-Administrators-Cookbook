@@ -19,4 +19,3 @@ function Set-Name {
         }
     }
 }
-Set-Name
