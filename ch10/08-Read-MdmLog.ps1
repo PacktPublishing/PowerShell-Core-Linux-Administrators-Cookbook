@@ -1,4 +1,4 @@
-$AllLogLines = Get-Content ./08-mdm-reinstall-log.log
+$AllLogLines = Get-Content ./ch10/08-mdm-reinstall-log.log
 $UserTable = @()
 
 foreach ($Line in $AllLogLines) {
