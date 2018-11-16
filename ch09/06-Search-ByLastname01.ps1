@@ -1,4 +1,4 @@
-$Names = Get-Content .\02-names.txt
+$Names = Get-Content .\ch09\02-names.txt
 $Names = $Names -match 'son$'
 
 # or $Names = $Names -like '*son'

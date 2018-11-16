@@ -1,4 +1,4 @@
-$Names = Get-Content .\02-names.txt | Sort-Object
+$Names = Get-Content .\ch09\02-names.txt | Sort-Object
 $NewNames = @()
 
 foreach ($Name in $Names) {
