@@ -1,4 +1,4 @@
-$Date = Get-Date '2018-11-18'
+$Date = Get-Date
 
 if ($Date.DayOfWeek -in 'Saturday', 'Sunday') {
     Write-Host 'We party on weekends!' -BackgroundColor Yellow -ForegroundColor Black
