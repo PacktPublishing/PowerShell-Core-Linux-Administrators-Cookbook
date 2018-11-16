@@ -1,4 +1,4 @@
-$PathInfo = Import-Csv './chapter-07/07-input.csv'
+$PathInfo = Import-Csv './ch06/07-input.csv'
 
 # Looping construct here
 $Path = $PathInfo.Path

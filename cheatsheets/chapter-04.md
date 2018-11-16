@@ -1,6 +1,6 @@
 # Passing Data through the Pipeline
 
-Clone the [repository from GitHub](https://github.com/PacktPublishing/PowerShell-6.0-Linux-Administration-Cookbook) or download the [lab setup script](https://github.com/PacktPublishing/PowerShell-6.0-Linux-Administration-Cookbook/blob/master/chapter-05/Initialize-PacktPs6CoreLinuxLab.ps1) from the repository.
+Clone the [repository from GitHub](https://github.com/PacktPublishing/PowerShell-6.0-Linux-Administration-Cookbook) or download the [lab setup script](https://github.com/PacktPublishing/PowerShell-6.0-Linux-Administration-Cookbook/blob/master/ch04/Initialize-PacktPs6CoreLinuxLab.ps1) from the repository.
 
 Run the script to create the files for the lab.
 

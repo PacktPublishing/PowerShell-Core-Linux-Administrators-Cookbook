@@ -1,4 +1,4 @@
-$Guests = Import-Csv './chapter-08/05-Write-GuestSeatDetails.csv'
+$Guests = Import-Csv './ch07/05-Write-GuestSeatDetails.csv'
 
 for ($CurrentGuest = 0; $CurrentGuest -lt $Guests.Length; $CurrentGuest++) {
     $Guest = $Guests[$CurrentGuest]

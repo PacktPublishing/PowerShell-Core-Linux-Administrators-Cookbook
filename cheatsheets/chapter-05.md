@@ -137,7 +137,7 @@ Break down the XML to understand the different kinds of properties:
 Extend the type data using an XML file:
 
 ```powershell
-Update-TypeData -PrependPath '~/Documents/code/github/powershell/chapter-06/CustomTypes.ps1xml'
+Update-TypeData -PrependPath '~/Documents/code/github/powershell/ch05/CustomTypes.ps1xml'
 ```
 
 Remove custom type data:
