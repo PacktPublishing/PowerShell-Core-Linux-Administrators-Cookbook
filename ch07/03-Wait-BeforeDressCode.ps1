@@ -1,4 +1,4 @@
-$Date = Get-Date
+$Date = Get-Date '2018-11-18'
 
 if ($Date.DayOfWeek -in 'Saturday', 'Sunday') {
     Write-Host 'We party on weekends!' -BackgroundColor Yellow -ForegroundColor Black
@@ -11,8 +11,6 @@ else {
 }
 
 Start-Sleep -Seconds 5
-
-$Date = Get-Date
 
 switch ($Date.DayOfWeek) {
     'Monday' { Write-Output 'Wear red.'; break }
