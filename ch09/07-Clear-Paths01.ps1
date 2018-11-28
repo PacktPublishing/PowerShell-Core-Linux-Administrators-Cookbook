@@ -1,3 +1,4 @@
 $Paths = (Get-ChildItem $HOME/random -Recurse).FullName
-$Paths = $Paths -notmatch "^$HOME/random/dir04" | ForEach-Object { Remove-Item $PSItem }
-Remove-Item $Paths
+$Paths = $Paths | Where-Object {$PSItem -notmatch "^$HOME/random/dir-04"}
+Write-Output "Here is the list of paths within the lab directory, without those within dir-04:`n`n"
+$Paths

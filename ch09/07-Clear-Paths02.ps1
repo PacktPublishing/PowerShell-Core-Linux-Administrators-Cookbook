@@ -1,12 +1,13 @@
-$PathsToDelete = New-Object -TypeName System.Collections.ArrayList
+$AllPaths = New-Object -TypeName System.Collections.ArrayList
 foreach ($Path in (Get-ChildItem $HOME/random -Recurse)) {
-    [void]$PathsToDelete.Add($Path.FullName)
+    [void]$AllPaths.Add($Path.FullName)
 }
 
-$PathsToPreserve = $PathsToDelete -match "^$HOME/random/dir-04"
+$PathsToExclude = $AllPaths -match "^$HOME/random/dir-04"
 
-foreach ($Dir4Path in $PathsToPreserve) {
-    $PathsToDelete.Remove($Dir4Path)
+foreach ($Dir4Path in $PathsToExclude) {
+    $AllPaths.Remove($Dir4Path)
 }
 
-Remove-Item $PathsToDelete
+Write-Output "Here is the list of paths within the lab directory, without those within dir-04:`n`n"
+$AllPaths
