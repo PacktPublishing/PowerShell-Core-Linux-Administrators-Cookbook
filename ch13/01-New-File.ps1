@@ -14,7 +14,7 @@ function New-File {
         Write-Debug "Entered the process block."
         foreach ($Item in $Path) {
             Write-Debug "Iterating for item, $Item."
-            New-Item -Path $Path -ItemType File
+            New-Item -Path $Item -ItemType File
         }
     }
     end {

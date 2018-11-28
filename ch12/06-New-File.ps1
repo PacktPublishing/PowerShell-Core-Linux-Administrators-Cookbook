@@ -10,7 +10,7 @@ function New-File {
     }
     process {
         foreach ($Item in $Path) {
-            New-Item -Path $Path -ItemType File
+            New-Item -Path $Item -ItemType File
         }
     }
     end {}

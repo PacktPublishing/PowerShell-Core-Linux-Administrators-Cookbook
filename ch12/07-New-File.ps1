@@ -15,7 +15,7 @@ function New-File {
     process {
         foreach ($Item in $Path) {
             if ($PSCmdlet.ShouldProcess("$PsScriptRoot", "Create $Path")) {
-                New-Item -Path $Path -ItemType File
+                New-Item -Path $Item -ItemType File
             }
         }
     }
