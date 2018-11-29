@@ -21,3 +21,5 @@ function New-File {
         Write-Debug "Entered the end block."
     }
 }
+
+New-File One.txt

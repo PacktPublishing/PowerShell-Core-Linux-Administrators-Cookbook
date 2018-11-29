@@ -6,18 +6,9 @@ function New-File {
         [string[]]
         $Path
     )
-    begin {
-        Write-Debug "Entered the begin block."
-        Write-Host "$(Get-Date)"
-    }
-    process {
-        Write-Debug "Entered the process block."
-        foreach ($Item in $Path) {
-            Write-Debug "Iterating for item, $Item."
-            New-Item -Path $Item -ItemType File
-        }
-    }
-    end {
-        Write-Debug "Entered the end block."
+    Write-Debug "Entered the process block."
+    foreach ($Item in $Path) {
+        Write-Debug "Iterating for item, $Item."
+        New-Item -Path $Item -ItemType File
     }
 }
