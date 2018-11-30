@@ -1,1 +1,0 @@
-# PowerShell and Cloud Operations

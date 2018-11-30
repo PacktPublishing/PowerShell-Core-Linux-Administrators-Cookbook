@@ -1,1 +1,0 @@
-# Using PowerShell for SQL Database Management
