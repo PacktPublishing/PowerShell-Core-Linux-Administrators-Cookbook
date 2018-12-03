@@ -1,6 +1,6 @@
-# PowerShell 6.0 Linux Administration Cookbook
+# PowerShell Core for Linux Administrators Cookbook
 
-<a href="https://www.packtpub.com/networking-and-servers/powershell-60-linux-administration-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781789137231 "><img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B10409_0.png" alt="PowerShell 6.0 Linux Administration Cookbook" height="256px" align="right"></a>
+<a href="https://www.packtpub.com/networking-and-servers/powershell-60-linux-administration-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781789137231 "><img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/B10409_0.png" alt="PowerShell Core for Linux Administrators Cookbook" height="256px" align="right"></a>
 
 This is the code repository for [PowerShell 6.0 Linux Administration Cookbook](https://www.packtpub.com/networking-and-servers/powershell-60-linux-administration-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781789137231 ), published by Packt.
 
