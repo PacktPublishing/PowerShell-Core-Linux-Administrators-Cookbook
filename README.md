@@ -32,7 +32,7 @@ Write-Output "Hello, $env:username!"
 ```
 
 **Following is what you need for this book:**
-PowerShell Core 6.1 Linux Administration Cookbook is for you if you are a system administrator who wants to learn to control and automate a Linux environment with PowerShell Core 6.1. Basic knowledge of PowerShell scripting is necessary. It is assumed that you already understand how an operating system is structured and how to use the command-line interface to work with the operating system.
+PowerShell Core for Linux Administrators Cookbook is for you if you are a system administrator who wants to learn to control and automate a Linux environment with PowerShell Core 6.1. Basic knowledge of PowerShell scripting is necessary. It is assumed that you already understand how an operating system is structured and how to use the command-line interface to work with the operating system.
 
 With the following software and hardware list you can run all code files present in the book (Chapter 1-17).
 ### Software and Hardware List
