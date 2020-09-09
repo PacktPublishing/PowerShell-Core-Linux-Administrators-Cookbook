@@ -49,7 +49,11 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 ### Errata
 * Chapter 11, recipe name: Measuring running duration-  **Software disenchantment (http://tonsky.me/blog/disenchantment/) by
-  Nikita Prokopov, the author of the beautiful font Fira Sans** _should be_ **Software disenchantment (http://tonsky.me/blog/disenchantment/) by Nikita Prokopov, the creator of the beautiful font, Fira Code**
+  Nikita Prokopov, the author of the beautiful font Fira Sans**
+ 
+ _should be_
+ 
+  **Software disenchantment (http://tonsky.me/blog/disenchantment/) by Nikita Prokopov, the creator of the beautiful font, Fira Code**
 
 
 ### Related products
