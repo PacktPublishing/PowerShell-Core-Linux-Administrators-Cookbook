@@ -47,6 +47,10 @@ With the following software and hardware list you can run all code files present
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://www.packtpub.com/sites/default/files/downloads/9781789137231_ColorImages.pdf).
 
+### Errata
+* Chapter 11, recipe name: Measuring running duration-  **Software disenchantment (http:/ / tonsky. me/ blog/ disenchantment/ ) by
+Nikita Prokopov, the author of the beautiful font Fira Sans** _should be_ *Software disenchantment (http://tonsky.me/blog/disenchantment/) by Nikita Prokopov, the creator of the beautiful font, Fira Code**
+
 ### Related products
 * Learn PowerShell Core 6.0 [[Packt]](https://www.packtpub.com/networking-and-servers/learn-powershell-core-60?utm_source=github&utm_medium=repository&utm_campaign=9781788838986 ) [[Amazon]](https://www.amazon.com/dp/178883898X)
 
