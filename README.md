@@ -48,7 +48,7 @@ With the following software and hardware list you can run all code files present
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://www.packtpub.com/sites/default/files/downloads/9781789137231_ColorImages.pdf).
 
 ### Errata
-* Chapter 11, recipe name: _Measuring running duration_
+* Chapter 11, recipe name: _Measuring running duration_, section name: _See also_
 
    **Software disenchantment (http://tonsky.me/blog/disenchantment/) by Nikita Prokopov, the author of the beautiful font Fira Sans**
  
