@@ -1,3 +1,8 @@
+## $5 Tech Unlocked 2021!
+[Buy and download this Book for only $5 on PacktPub.com](https://www.packtpub.com/product/powershell-core-for-linux-administrators-cookbook/9781789137231)
+-----
+*If you have read this book, please leave a review on [Amazon.com](https://www.amazon.com/gp/product/1789137233).     Potential readers can then use your unbiased opinion to help them make purchase decisions. Thank you. The $5 campaign         runs from __December 15th 2020__ to __January 13th 2021.__*
+
 # PowerShell Core for Linux Administrators Cookbook
 
 <a href="https://www.packtpub.com/networking-and-servers/powershell-60-linux-administration-cookbook?utm_source=github&utm_medium=repository&utm_campaign=9781789137231 "><img src="https://www.packtpub.com/sites/default/files/cover_10409.png" alt="PowerShell Core for Linux Administrators Cookbook" height="256px" align="right"></a>
